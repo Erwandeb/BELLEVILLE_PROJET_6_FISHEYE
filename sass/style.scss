@@ -1,0 +1,269 @@
+@import "variables/variables.scss";
+
+
+/*  ./dart-sass/sass sass/style.scss style.css --watch*/
+
+/* la valeur de reférence est 425px en mobile*/
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+@media screen and (max-width:426px){
+
+    body{
+        max-width : 426px;
+        font-family: 'DM Sans', sans-serif;
+        margin:auto;
+        align-items: center;
+
+        //font-family: 'Roboto', sans-serif;
+    }
+
+    /*--Header de la page---*/
+    header{
+       width: 100%;
+       height:245px;
+       position: relative;
+       align-items: center;
+       display:flex;
+       justify-content: center;
+       a{
+           img{
+           width:50%;
+           position:absolute;
+           top:40px;
+           left:10px;
+            }
+        }
+       nav{
+           width: 80%;
+           align-items: center;
+           text-align: center;
+           margin-top: 30px;
+            
+           button{
+            border-radius: 20px;
+            padding:2%;
+            background-color: white;
+            color: $primaryColor1;
+            border: 1px solid grey;
+            font-weight: bold;
+            font-size: small;
+            &:hover{
+                background-color: $primaryColor1;
+                color:white;
+            }
+           }
+            
+            
+        }
+       
+       h2{
+           font-size :medium;
+           position: absolute;
+           top: 50px;
+           right:20px;
+           color: $primaryColor1;
+    
+       }
+    }
+
+    /*---Main---*/
+    main{
+        width: 100%;
+        height: auto;
+
+        article{
+            width: 100%;
+            height:365px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin-top:10px;
+            margin-bottom: 10px;
+            //background-color: yellow;
+            // border: 2px solid red;
+            a{
+                img{
+                    width : 200px;
+                    height:200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 30px;
+                    box-shadow:0px 6px 20px grey;
+                }
+            }
+            
+            .description-article{
+                width:100%;
+                
+                h2{
+                    font-weight: 400;
+                    font-size: x-large;
+                    color: $primaryColor2
+                }
+                h3{
+                    font-weight: 400;
+                    font-size: x-small;
+                    color: $primaryColor2;
+                }
+                p{
+                    color:$secondaryColor2;
+                }
+            }
+            .filtres-articles{
+                width: 100%;
+                button{
+                    border-radius: 20px;
+                    padding:2%;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: small;
+                    &:hover{
+                        background-color: $primaryColor1;
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (min-width:1024px){
+
+    body{
+        width : 1024px;
+        font-family: 'DM Sans', sans-serif;
+        margin:auto;
+        align-items: center;
+        //font-family: 'Roboto', sans-serif;
+    }
+
+    /*--Header de la page---*/
+    header{
+       width: 100%;
+       height:150px;
+       align-items: center;
+       display:flex;
+       justify-content: center;
+       a{
+        width: 230px;
+            img{
+            width:100%;
+            }
+        }
+       nav{
+           width: 80%;
+           align-items: center;
+           text-align: center;
+          
+            
+           button{
+            border-radius: 20px;
+            padding:5px;
+            background-color: white;
+            color: $primaryColor1;
+            border: 1px solid grey;
+            font-weight: bold;
+            font-size: x-small;
+            cursor: pointer;
+            &:hover{
+                background-color: $primaryColor1;
+                color:white;
+            }
+            }
+        }
+       
+       h2{
+           font-size :medium;
+            width: 330px;
+           color: $primaryColor1;
+       }
+    }
+
+    /*---Main---*/
+    main{
+        width: 100%;
+        height: 860px;
+        display: flex;
+        flex-wrap :wrap;
+        justify-content: space-between;
+
+        article{
+            width: 325px;
+            height:360px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin : 7px;
+            //background-color: yellow;
+            //border: 2px solid red;
+            a{
+                img{
+                    width : 200px;
+                    height:200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 30px;
+                    box-shadow:0px 6px 20px grey;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.10);
+                    }
+                }
+            }
+            
+            .description-article{
+                width:100%;
+                
+                h2{
+                    font-weight: 400;
+                    font-size: xx-large;
+                    color: $primaryColor2
+                }
+                h3{
+                    font-weight: 400;
+                    font-size: medium;
+                    color: $primaryColor2;
+                }
+                blockquote{
+                    font-size: x-small;
+                }
+                p{
+                    color:$secondaryColor2;
+                    font-size: x-small;
+                }
+            }
+            .filtres-articles{
+                width: 100%;
+                margin:5px;
+                button{
+                    border-radius: 20px;
+                    padding:5px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: x-small;
+                    &:hover{
+                        background-color: $primaryColor1;
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

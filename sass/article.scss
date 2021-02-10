@@ -1,0 +1,571 @@
+@import "variables/variables.scss";
+
+/*  ./dart-sass/sass sass/article.scss article.css --watch*/
+
+@media screen and (max-width:426px){
+
+    body{
+        max-width : 426px;
+        font-family: 'DM Sans', sans-serif;
+        margin:auto;
+        align-items: center;
+
+        //font-family: 'Roboto', sans-serif;
+    }
+
+    /*--Header de la page---*/
+    header{
+       width: 100%;
+       height:245px;
+       position: relative;
+       align-items: center;
+       display:flex;
+       justify-content: center;
+       a{
+           img{
+           width:50%;
+           position:absolute;
+           top:40px;
+           left:10px;
+            }
+        }
+       nav{
+           width: 80%;
+           align-items: center;
+           text-align: center;
+           margin-top: 30px;
+            
+           button{
+            border-radius: 20px;
+            padding:2%;
+            background-color: white;
+            color: $primaryColor1;
+            border: 1px solid grey;
+            font-weight: bold;
+            font-size: small;
+            &:hover{
+                background-color: $primaryColor1;
+                color:white;
+            }
+           }
+            
+            
+        }
+       
+       h2{
+           font-size :medium;
+           position: absolute;
+           top: 50px;
+           right:20px;
+           color: $primaryColor1;
+    
+       }
+    }
+
+    /*---Main---*/
+    main{
+        width: 100%;
+        height: auto;
+
+        article{
+            width: 100%;
+            height:365px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin-top:10px;
+            margin-bottom: 10px;
+            //background-color: yellow;
+            // border: 2px solid red;
+            a{
+                img{
+                    width : 200px;
+                    height:200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 30px;
+                    box-shadow:0px 6px 20px grey;
+                }
+            }
+            
+            .description-article{
+                width:100%;
+                
+                h2{
+                    font-weight: 400;
+                    font-size: x-large;
+                    color: $primaryColor2
+                }
+                h3{
+                    font-weight: 400;
+                    font-size: x-small;
+                    color: $primaryColor2;
+                }
+                p{
+                    color:$secondaryColor2;
+                }
+            }
+            .filtres-articles{
+                width: 100%;
+                button{
+                    border-radius: 20px;
+                    padding:2%;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: small;
+                    &:hover{
+                        background-color: $primaryColor1;
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (min-width:1024px){
+
+    body{
+        width : 1024px;
+        font-family: 'DM Sans', sans-serif;
+        margin:auto;
+        align-items: center;
+        position: relative;
+        //font-family: 'Roboto', sans-serif;
+    }
+
+    /*--Header de la page---*/
+    header{
+       width: 100%;
+       height:150px;
+       align-items: center;
+       display:flex;
+        justify-content:start;
+       a{
+        width: 230px;
+        align-items: flex-start;
+        display: flex;
+        justify-content: flex-start;
+            img{
+            width:100%;
+            }
+        }
+       nav{
+           width: 80%;
+           align-items: center;
+           text-align: center;
+          
+            
+           button{
+            border-radius: 20px;
+            padding:5px;
+            background-color: white;
+            color: $primaryColor1;
+            border: 1px solid grey;
+            font-weight: bold;
+            font-size: x-small;
+            cursor: pointer;
+            &:hover{
+                background-color: $primaryColor1;
+                color:white;
+            }
+            }
+        }
+       
+       h2{
+           font-size :medium;
+            width: 330px;
+           color: $primaryColor1;
+       }
+    }
+
+    /*---Main---*/
+    main{
+        width: 100%;
+        height: 310px;
+        display: flex;
+        flex-wrap :wrap;
+        justify-content: space-between;
+        background-color: #FAFAFA;
+        position: relative;
+
+        .presentation{
+            width: 310px;
+            height:310px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: flex-start;
+            padding-left: 50px;
+             h2{
+                 margin:0px;
+                 font-weight: lighter;
+                 font-size: 45px;
+                 color: $primaryColor2;
+                 letter-spacing: 2px;
+             }
+             h3{
+                margin:0px;
+                font-weight: lighter;
+                font-size: medium;
+                color: $primaryColor1;
+             }
+             blockquote{
+                margin:0px;
+                font-weight: lighter;
+                font-size: small;
+                color:$secondaryColor2;
+             }
+            .filtres-articles{
+               button{
+                border-radius: 20px;
+                padding:5px;
+                background-color: white;
+                color: $primaryColor1;
+                border: 1px solid grey;
+                font-weight: bold;
+                font-size: x-small;
+                cursor: pointer;
+                &:hover{
+                    background-color: $primaryColor1;
+                    color:white;
+                }
+               }
+                
+            }
+        }
+        .contact{
+            position: absolute;
+            top:100px;
+            left : 355px;
+            cursor: pointer;
+            button{
+                padding:5px;
+                margin : 5px;
+                height:45px;
+                background-color: $primaryColor1;
+                border-radius:5px;
+                color:white;
+                border:none;
+                font-family: "DM sans";
+                font-size: 16px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $primaryColor2;
+                    color:black;
+                    font-weight: bold;
+                }
+            }
+        }
+        
+
+        a{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 335px;
+            img{
+                width : 200px;
+                height:200px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 30px;
+                box-shadow:0px 6px 20px grey;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.10);
+                }
+            }
+        }
+    }
+
+    section{
+        width: 100%;
+        height: auto;
+        
+
+        .trier{
+            display: flex;
+            position: relative;
+            p{
+                width: 85px;
+                font-weight: bold;
+            }
+           nav{
+               display: flex;
+               justify-content: center;
+               
+                ul{
+                background-color: $primaryColor1;
+                list-style-type : none;
+                display: inline-block;
+                align-items: center;
+                padding-left: 5px;
+                padding-right:5px;
+                width: 140px;
+                padding:0px;
+                border-radius:5px;
+                justify-content: center;
+                justify-self: center;
+                position: absolute;
+                top:0px;
+                left:110px;
+                    li{
+                        width: 60%;
+                        height: 37px;
+                        list-style-type : none;
+                        padding:0px;
+                        border-top: 1px solid white;
+                        align-items: center;
+                        font-weight: bold;
+                        color:white;
+                        justify-content: flex-start;
+                        display: flex;
+                        margin-left: 29px;
+                    }
+                }
+            }
+        }
+
+    /*--- Description image du carroussel.....*/
+        .carroussel{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap:15px;
+            grid-row: 6;
+            figure{
+                width : 250px;
+                img{
+                    width : 250px;
+                    height:250px;
+                    border-radius: 5px;
+                    object-fit: cover;
+                }
+                .description-image{
+                    width : 250px;
+                    display: flex;
+                    justify-content:space-between;
+                    color: $primaryColor1;
+                    font-weight: bold;
+                }
+                .prix-like{
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 5px;
+                    width: 75px;
+                    p{
+                        margin:0px;
+                        
+                    }
+                }
+            }
+        }
+    }
+ 
+ 
+ /* -------LightBox------------*/
+.lightbox{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    top:0px;
+    //background-color: white;
+    background-color: yellow;
+
+    .closeLightbox{
+        position: absolute;
+        top:75px;
+        right:5%;
+        font-size: 70px;
+        color:$primaryColor1;
+        cursor: pointer;
+    }
+    .suivantLightBox{
+        position: absolute;
+        top:40%;
+        right:5%;
+        width: 50px;
+        color:$primaryColor1;
+        font-size: 70px;
+        z-index: 20;
+        cursor: pointer;
+    }
+    .precedentLightBox{
+        position: absolute;
+        top:40%;
+        left:5%;
+        width: 50px;
+        color:$primaryColor1;
+        font-size: 70px;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .window-slider{
+        width: 747px;
+        height: 800px;
+        right: 14%;
+        top: 18%;
+        border: 3px solid red;
+        position: absolute;
+        
+        .slider{
+            height: 800px;
+            display: flex;
+            justify-content: start;
+            right: 14%;
+            top: 20%;
+            
+            figure{
+                width: 100%;
+               margin:0px;
+                img{
+                    object-fit: cover;
+                    width: 747px;
+                    height:90%;
+                }
+                figcaption{
+                    color: $primaryColor1;
+                    font-size: x-large;
+                    margin-left: 5px;
+                }
+                
+            }
+           
+        }
+
+    }
+        
+    }
+
+
+
+ 
+ 
+/*-------Formulaire------------*/
+.fenetre-modale{
+    display: none;
+    z-index: 13;
+   position: absolute;
+   top: 0px;
+    right: 0px;
+    
+    .formulaire{
+        height:900px;
+        width:675px;
+        background-color: $secondaryColor1;
+        display: flex;
+        flex-direction: column;
+        padding:20px;
+        position: absolute;
+        top: 115px;
+        right:160px;
+        border-radius: 5px;
+        box-shadow: 4px 17px 20px 1px black;
+        
+        .titre-nom{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           height: 135px;
+           margin-bottom: 50px;
+           position: relative;
+          
+
+            h1{
+                font-size: 62px;
+                font-weight : 500;
+                margin:0px;
+    
+            }
+            h2{
+                font-size: 62px;
+                font-weight : 500;
+                margin:0px;
+            }
+        }
+       .closeBtn{
+        position: absolute;
+        top: -5px;
+        right: 67px;
+        color: white;
+        font-weight: 100;
+        font-size: 66px;
+        border-radius: none;
+        cursor: pointer;
+       }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            font-size: 32px;
+           
+
+
+            label{
+                font-weight: lighter;
+                font-size: 46px;
+
+            }
+            input{
+                width: 600px;
+                height: 70px;
+                border-radius:5px;
+                border:none;
+                font-size: 35px;
+                padding-left: 10px;
+            }
+            textarea{
+                width: 600px;
+                height: 140px;
+                border-radius:5px;
+                border:none;
+                font-size: 35px;
+                padding-left: 10px;
+            }
+
+            .soumission{
+                color:white;
+                background-color:$primaryColor1;
+                width: 170px;
+                height:70px;
+                font-family: "DM sans";
+                font-size: 22px;
+                margin-top:30px;
+                border:none;
+                border-radius:5px;
+            }
+        }
+    }
+}
+
+    footer{
+        width: 26%;
+        position:sticky;
+        bottom:0px;
+        right: 0px;
+        display: flex;
+        justify-content: space-around;
+        background-color: $primaryColor2;
+        color:black;
+        font-weight: bold;
+        align-items: center;
+        border-radius: 5px 5px 0px 0px;
+        margin-left: 755px;
+        z-index: 3;
+    }
+
+
+}

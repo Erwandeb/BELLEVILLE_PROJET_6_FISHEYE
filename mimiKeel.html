@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="article.css">
+    <script src="https://kit.fontawesome.com/e0ec5a3dfc.js" crossorigin="anonymous"></script>
+   
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Mimi Keel</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="photos/logo-fisheye.png" alt="logo de fishEye"/></a>
+    </header>
+
+    <main>
+        <div class="presentation">
+            <h2>Mimi Keel</h2>
+            <h3>London, UK</h3>
+            <blockquote lang="en-GB">Voir le beau dans le quotidien</blockquote>
+        
+            <div class="filtres-articles">
+                <button type="button">#Portrait</button>
+                <button type="button">#Events</button>
+                <button type="button">#Travel</button>
+                <button type="button">#Animals</button>
+            </div>
+        </div>
+
+        <div class="contact"><button type ="button">Contactez-moi</button></div>
+
+        <a href="mimiKeel.html"><img src="photos/Mimi/Portrait_Nora.jpg" alt=" un potrait de Nora avec des lunettes"/></a>
+    </main>
+   
+
+    <section>
+        <div class="trier">
+            <p>Trier par :</p>
+            <nav>
+                <ul>
+                    <li> Popularité</li>
+                    <li> Date </li>
+                    <li> Titre </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="carroussel">
+            <figure>
+                <img class="carroussel-img" src="photos/Mimi/Animals_Rainbow.jpg" alt=" Un martin pecheur sur une branche"/>
+                <div class="description-image">
+                    <figcaption>Arc-en-ciel</figcaption>
+                    <div class="prix-like">
+                        <p>70 €</p>
+                        <span class="like">12</span><i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img class="carroussel-img" src="photos/Mimi/Travel_Lonesome.jpg" alt=" Un humain au sommet d'une montagne"/>
+                <div class="description-image">
+                    <figcaption>Solitude</figcaption>
+                    <div class="prix-like">
+                        <p>70 €</p>
+                        <span class="like">12</span><i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img class="carroussel-img" src="photos/Mimi/Event_SeasideWedding.jpg" alt=" Une grande table avec le couvert dressé pour un mariage"/>
+                <div class="description-image">
+                    <figcaption>Mariage à la mer</figcaption>
+                    <div class="prix-like">
+                        <p>70 €</p>
+                        <span class="like">12</span><i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img class="carroussel-img" src="photos/Mimi/Portrait_Background.jpg" alt=" Une jeune fille en noir et blanc"/>
+                <div class="description-image">
+                    <figcaption>Arc-en-ciel</figcaption>
+                    <div class="prix-like">
+                        <p>70 €</p>
+                        <span class="like">12</span><i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img class="carroussel-img" src="photos/Mimi/Event_PintoWedding.jpg" alt=" Une photo de mariage en plein été"/>
+                <div class="description-image">
+                    <figcaption>Arc-en-ciel</figcaption>
+                    <div class="prix-like">
+                        <p>70 €</p>
+                        <span class="like">12</span><i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </figure>
+
+            <figure>
+                <img class="carroussel-img" src="photos/Mimi/Portrait_Wednesday.jpg" alt=" Une enfant qui se tient accroupie pour reflechir"/>
+                <div class="description-image">
+                    <figcaption>Arc-en-ciel</figcaption>
+                    <div class="prix-like">
+                        <p>70 €</p>
+                        <span class="like">12</span><i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </figure>
+
+        </div>
+        
+    </section>
+
+    <!--lightbox--> 
+    <div class="lightbox">
+        <div class="closeLightbox"><i class="fas fa-times"></i></div>
+        <div class="suivantLightBox"><i class="fas fa-chevron-right"></i></div>
+        <div class="precedentLightBox"><i class="fas fa-chevron-left"></i></div>
+    
+        <div class="window-slider">
+            <div class="slider">
+                
+                <figure id ="lastClone">
+                    <img  src="photos/Mimi/Portrait_Wednesday.jpg" alt=" Une enfant qui se tient accroupie pour reflechir"/>
+                    <div class="description-image">
+                        <figcaption>Arc-en-ciel</figcaption>
+                    </div>
+                </figure> 
+
+                <figure class="lightBox-img">
+                    <img  src="photos/Mimi/Animals_Rainbow.jpg" alt=" Un martin pecheur sur une branche"/>
+                    <div class="description-image">
+                        <figcaption>Arc-en-ciel</figcaption>
+                    </div>
+                </figure>
+    
+                <figure class="lightBox-img">
+                    <img  src="photos/Mimi/Travel_Lonesome.jpg" alt=" Un martin pecheur sur une branche"/>
+                    <div class="description-image">
+                        <figcaption>Solitude</figcaption>
+                    </div>
+                </figure>
+    
+                <figure class="lightBox-img">
+                    <img src="photos/Mimi/Event_SeasideWedding.jpg" alt=" Un martin pecheur sur une branche"/>
+                    <div class="description-image">
+                        <figcaption>Mariage à la mer</figcaption>
+                    </div>
+                </figure>
+    
+                <figure class="lightBox-img">
+                    <img  src="photos/Mimi/Portrait_Background.jpg" alt=" Une jeune fille en noir et blanc"/>
+                    <div class="description-image">
+                        <figcaption>Arc-en-ciel</figcaption>
+                    </div>
+                </figure>
+    
+                <figure class="lightBox-img">
+                    <img  src="photos/Mimi/Event_PintoWedding.jpg" alt=" Une photo de mariage en plein été"/>
+                    <div class="description-image">
+                        <figcaption>Arc-en-ciel</figcaption>
+                    </div>
+                </figure>
+    
+                <figure class="lightBox-img">
+                    <img  src="photos/Mimi/Portrait_Wednesday.jpg" alt=" Une enfant qui se tient accroupie pour reflechir"/>
+                    <div class="description-image">
+                        <figcaption>Arc-en-ciel</figcaption>
+                    </div>
+                </figure> 
+
+                <figure id="firstClone">
+                    <img  src="photos/Mimi/Animals_Rainbow.jpg" alt=" Un martin pecheur sur une branche"/>
+                    <div class="description-image">
+                        <figcaption>Arc-en-ciel</figcaption>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- fenetre modale--> 
+    <div class="fenetre-modale">
+            <div class="formulaire">
+                <div class="titre-nom">
+                    <h1>Contactez-moi</h1>
+                    <h2>Mimi Keel</h2>
+                    <div class="closeBtn"><i class="fas fa-times"></i></div>
+                </div>
+        
+                <form action="#">
+
+                    <label for="firstname">Prénom  </label>
+                    <input type="text" id="firstname" name="firstname">
+                    
+                    <label for="lastname">Nom  </label>
+                    <input type="text" id="lastname" name="lastname">
+                    
+                    <label for="email">Email  </label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="message">Message  </label>
+                    <textarea name="message" id="message"></textarea>
+
+                    <button class="soumission" type ="submit">Envoyer</button>
+
+                </form>
+        </div>
+    </div>
+    <footer>
+        <div class="compte-like">
+            <span class="like">297 081 </span><i class="fas fa-heart"></i>
+        </div>
+        <p>300€/jour</p>
+    </footer>
+    <script type="text/javascript" src="modale.js"></script>
+    <script type="text/javascript" src="javascript/ligthbox.js"></script>
+</body>
+</html>
+    
