@@ -190,23 +190,26 @@
   main .presentation h3 {
     margin: 0px;
     font-weight: lighter;
-    font-size: medium;
+    font-size: 20px;
     color: #901C1C;
   }
   main .presentation blockquote {
-    margin: 0px;
+    margin: 10px 0px 10px 0px;
     font-weight: lighter;
     font-size: small;
     color: #525252;
+  }
+  main .presentation .filtres-articles {
+    margin: 0px;
   }
   main .presentation .filtres-articles button {
     border-radius: 20px;
     padding: 5px;
     background-color: white;
     color: #901C1C;
-    border: 1px solid grey;
+    border: none;
     font-weight: bold;
-    font-size: x-small;
+    font-size: small;
     cursor: pointer;
   }
   main .presentation .filtres-articles button:hover {
@@ -215,7 +218,7 @@
   }
   main .contact {
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 355px;
     cursor: pointer;
   }
@@ -243,11 +246,11 @@
     width: 335px;
   }
   main a img {
-    width: 200px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     box-shadow: 0px 6px 20px grey;
     cursor: pointer;
   }
@@ -258,11 +261,14 @@
   section {
     width: 100%;
     height: auto;
-    /*--- Description image du carroussel.....*/
+    /*--- Description image du carroussel ----*/
   }
   section .trier {
     display: flex;
     position: relative;
+    width: 40%;
+    margin-left: 40px;
+    height: 80px;
   }
   section .trier p {
     width: 85px;
@@ -285,8 +291,8 @@
     justify-content: center;
     justify-self: center;
     position: absolute;
-    top: 0px;
-    left: 110px;
+    top: 5px;
+    left: 82px;
   }
   section .trier nav ul li {
     width: 60%;
@@ -307,36 +313,54 @@
     grid-column-gap: 15px;
     grid-row: 6;
   }
-  section .carroussel figure {
+  section .carroussel .carroussel-card {
     width: 250px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
-  section .carroussel figure img {
+  section .carroussel .carroussel-card img {
     width: 250px;
     height: 250px;
     border-radius: 5px;
     object-fit: cover;
+    cursor: pointer;
   }
-  section .carroussel figure .description-image {
+  section .carroussel .carroussel-card .description-image {
     width: 250px;
     display: flex;
     justify-content: space-between;
     color: #901C1C;
     font-weight: bold;
+    align-items: flex-start;
+    height: 70px;
+    padding-top: 5px;
   }
-  section .carroussel figure .prix-like {
+  section .carroussel .carroussel-card .description-image p {
+    margin: 0px;
+  }
+  section .carroussel .carroussel-card .prix-like {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 5px;
-    width: 75px;
+    width: 90px;
   }
-  section .carroussel figure .prix-like p {
+  section .carroussel .carroussel-card .prix-like p {
     margin: 0px;
+  }
+  section .carroussel .carroussel-card .prix-like .like-compteur {
+    width: 50px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  section .carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
+    cursor: pointer;
+    margin-left: 3px;
   }
 
   /* -------LightBox------------*/
   .lightbox {
-    z-index: 10;
+    z-index: -10;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -344,20 +368,21 @@
     align-items: center;
     justify-content: center;
     top: 0px;
-    background-color: yellow;
+    background-color: white;
+    opacity: 0;
   }
   .lightbox .closeLightbox {
     position: absolute;
-    top: 75px;
-    right: 5%;
+    top: 200px;
+    right: 8%;
     font-size: 70px;
     color: #901C1C;
     cursor: pointer;
   }
   .lightbox .suivantLightBox {
     position: absolute;
-    top: 40%;
-    right: 5%;
+    top: 45%;
+    right: 6%;
     width: 50px;
     color: #901C1C;
     font-size: 70px;
@@ -366,8 +391,8 @@
   }
   .lightbox .precedentLightBox {
     position: absolute;
-    top: 40%;
-    left: 5%;
+    top: 45%;
+    left: 6%;
     width: 50px;
     color: #901C1C;
     font-size: 70px;
@@ -379,8 +404,8 @@
     height: 800px;
     right: 14%;
     top: 18%;
-    border: 3px solid red;
     position: absolute;
+    overflow: hidden;
   }
   .lightbox .window-slider .slider {
     height: 800px;
@@ -397,6 +422,7 @@
     object-fit: cover;
     width: 747px;
     height: 90%;
+    border-radius: 5px;
   }
   .lightbox .window-slider .slider figure figcaption {
     color: #901C1C;
@@ -413,7 +439,7 @@
     right: 0px;
   }
   .fenetre-modale .formulaire {
-    height: 900px;
+    height: auto;
     width: 675px;
     background-color: #D3573C;
     display: flex;
@@ -462,6 +488,7 @@
   .fenetre-modale .formulaire form label {
     font-weight: lighter;
     font-size: 46px;
+    display: flex;
   }
   .fenetre-modale .formulaire form input {
     width: 600px;
@@ -490,6 +517,61 @@
     border: none;
     border-radius: 5px;
   }
+  .fenetre-modale .formulaire form .errorFirstName {
+    font-size: large;
+    color: whitesmoke;
+  }
+  .fenetre-modale .formulaire form .errorlastName {
+    font-size: medium;
+    color: whitesmoke;
+  }
+  .fenetre-modale .formulaire form .erroreMail {
+    font-size: medium;
+    color: whitesmoke;
+  }
+  .fenetre-modale .formulaire form .erroreMessageText {
+    font-size: medium;
+    color: whitesmoke;
+  }
+
+  .fenetre-validation-formulaire {
+    height: 200px;
+    width: 675px;
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    background-color: #D3573C;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 4px 17px 20px 1px black;
+  }
+  .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire {
+    height: 200px;
+    width: 675px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire p {
+    font-size: larger;
+  }
+  .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire a {
+    padding: 5px;
+    margin: 5px;
+    height: 45px;
+    background-color: #901C1C;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-family: "DM sans";
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+  }
 
   footer {
     width: 26%;
@@ -505,6 +587,9 @@
     border-radius: 5px 5px 0px 0px;
     margin-left: 755px;
     z-index: 3;
+  }
+  footer .fa-heart {
+    cursor: pointer;
   }
 }
 

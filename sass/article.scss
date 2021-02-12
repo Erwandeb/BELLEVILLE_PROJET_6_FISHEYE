@@ -214,24 +214,25 @@
              h3{
                 margin:0px;
                 font-weight: lighter;
-                font-size: medium;
+                font-size: 20px;
                 color: $primaryColor1;
              }
              blockquote{
-                margin:0px;
+                margin: 10px 0px 10px 0px;
                 font-weight: lighter;
                 font-size: small;
                 color:$secondaryColor2;
              }
             .filtres-articles{
+                margin: 0px;
                button{
                 border-radius: 20px;
                 padding:5px;
                 background-color: white;
                 color: $primaryColor1;
-                border: 1px solid grey;
+                border: none;
                 font-weight: bold;
-                font-size: x-small;
+                font-size: small;
                 cursor: pointer;
                 &:hover{
                     background-color: $primaryColor1;
@@ -243,7 +244,7 @@
         }
         .contact{
             position: absolute;
-            top:100px;
+            top:80px;
             left : 355px;
             cursor: pointer;
             button{
@@ -272,11 +273,11 @@
             justify-content: center;
             width: 335px;
             img{
-                width : 200px;
-                height:200px;
+                width : 175px;
+                height:175px;
                 border-radius: 50%;
                 object-fit: cover;
-                margin-bottom: 30px;
+                margin-bottom: 0px;
                 box-shadow:0px 6px 20px grey;
                 cursor: pointer;
                 &:hover{
@@ -294,6 +295,9 @@
         .trier{
             display: flex;
             position: relative;
+            width: 40%;
+            margin-left: 40px;
+            height: 80px;
             p{
                 width: 85px;
                 font-weight: bold;
@@ -315,8 +319,8 @@
                 justify-content: center;
                 justify-self: center;
                 position: absolute;
-                top:0px;
-                left:110px;
+                top: 5px;
+                left: 82px;
                     li{
                         width: 60%;
                         height: 37px;
@@ -334,19 +338,22 @@
             }
         }
 
-    /*--- Description image du carroussel.....*/
+/*--- Description image du carroussel ----*/
         .carroussel{
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap:15px;
             grid-row: 6;
-            figure{
+            .carroussel-card{
                 width : 250px;
+                margin-left: 40px;
+                margin-right: 40px;
                 img{
                     width : 250px;
                     height:250px;
                     border-radius: 5px;
                     object-fit: cover;
+                    cursor: pointer;
                 }
                 .description-image{
                     width : 250px;
@@ -354,17 +361,32 @@
                     justify-content:space-between;
                     color: $primaryColor1;
                     font-weight: bold;
+                    align-items: flex-start;
+                    height: 70px;
+                    padding-top :5px;
+                    p{
+                        margin :0px;
+                    }
                 }
                 .prix-like{
                     display:flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-left: 5px;
-                    width: 75px;
+                    width: 90px;
                     p{
                         margin:0px;
-                        
                     }
+                    .like-compteur{
+                        width: 50px;
+                        display: flex;
+                        justify-content: flex-end;
+                        .fa-heart{
+                            cursor: pointer;
+                            margin-left: 3px;
+                        }
+                    }
+                    
                 }
             }
         }
@@ -373,7 +395,7 @@
  
  /* -------LightBox------------*/
 .lightbox{
-    z-index: 10;
+    z-index: -10;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -381,21 +403,21 @@
     align-items: center;
     justify-content: center;
     top:0px;
-    //background-color: white;
-    background-color: yellow;
+    background-color: white;
+    opacity: 0;
 
     .closeLightbox{
         position: absolute;
-        top:75px;
-        right:5%;
+        top:200px;
+        right:8%;
         font-size: 70px;
         color:$primaryColor1;
         cursor: pointer;
     }
     .suivantLightBox{
         position: absolute;
-        top:40%;
-        right:5%;
+        top:45%;
+        right:6%;
         width: 50px;
         color:$primaryColor1;
         font-size: 70px;
@@ -404,8 +426,8 @@
     }
     .precedentLightBox{
         position: absolute;
-        top:40%;
-        left:5%;
+        top:45%;
+        left:6%;
         width: 50px;
         color:$primaryColor1;
         font-size: 70px;
@@ -418,16 +440,15 @@
         height: 800px;
         right: 14%;
         top: 18%;
-        border: 3px solid red;
         position: absolute;
-        
+        overflow: hidden;
+
         .slider{
             height: 800px;
             display: flex;
             justify-content: start;
             right: 14%;
             top: 20%;
-            
             figure{
                 width: 100%;
                margin:0px;
@@ -435,6 +456,7 @@
                     object-fit: cover;
                     width: 747px;
                     height:90%;
+                    border-radius: 5px;
                 }
                 figcaption{
                     color: $primaryColor1;
@@ -448,12 +470,8 @@
 
     }
         
-    }
+}
 
-
-
- 
- 
 /*-------Formulaire------------*/
 .fenetre-modale{
     display: none;
@@ -463,7 +481,7 @@
     right: 0px;
     
     .formulaire{
-        height:900px;
+        height:auto;
         width:675px;
         background-color: $secondaryColor1;
         display: flex;
@@ -511,13 +529,11 @@
             flex-direction: column;
             width: 600px;
             font-size: 32px;
-           
-
 
             label{
                 font-weight: lighter;
                 font-size: 46px;
-
+                display: flex;
             }
             input{
                 width: 600px;
@@ -547,8 +563,70 @@
                 border:none;
                 border-radius:5px;
             }
+
+            .errorFirstName{
+                font-size: large;
+                color : whitesmoke;
+            }
+            .errorlastName{
+                font-size: medium;
+                color : whitesmoke;
+            }
+            .erroreMail{
+                font-size: medium;
+                color : whitesmoke;
+
+            }
+            .erroreMessageText{
+                font-size: medium;
+                color : whitesmoke;
+
+            }
         }
     }
+}
+.fenetre-validation-formulaire{
+    height: 200px;
+    width:675px;
+    position:absolute;
+    top : 50%;
+    right : 18%;
+    background-color: $secondaryColor1;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 4px 17px 20px 1px black;
+
+    .contenu-fenetre-validation-formulaire{
+        height: 200px;
+        width:675px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+            p{
+                font-size: larger;
+            }
+        
+        
+            a{
+            padding: 5px;
+            margin: 5px;
+            height: 45px;
+            background-color: #901C1C;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            font-family: "DM sans";
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            align-items: center;
+            display: flex;
+            }
+    }
+    
 }
 
     footer{
@@ -565,6 +643,9 @@
         border-radius: 5px 5px 0px 0px;
         margin-left: 755px;
         z-index: 3;
+        .fa-heart{
+            cursor: pointer;
+        }
     }
 
 
