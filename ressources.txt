@@ -1,0 +1,16 @@
+ressources : 
+
+ - Vidéo sur le design Patterns Factory Method :
+
+1)  https://www.youtube.com/watch?v=fBNWgqMghkM
+
+2)  https://www.youtube.com/watch?v=kuirGzhGhyw&t=237s
+
+3)  https://www.youtube.com/watch?v=atFLkqYefLQ
+
+4) https://www.youtube.com/watch?v=ccX3ApO4qz8
+
+
+
+
+

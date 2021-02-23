@@ -1,0 +1,178 @@
+
+  /*
+  for (photographers of data.photographers){
+    main.innerHTML += `
+    <article>
+            <a href="mimiKeel.html"><img src="photos/Mimi/Portrait_Nora.jpg" alt=" un potrait de Nora avec des lunettes"/></a>
+            <div class="description-article">
+                <h2>${photographer.name}</h2>
+                <h3>London, UK</h3>
+                <blockquote lang="en-GB">Voir le beau dans le quotidien</blockquote>
+                <p>400€/jour</p>
+            </div>
+            <div class="filtres-articles">
+                <button type="button">#Portrait</button>
+                <button type="button">#Events</button>
+                <button type="button">#Travel</button>
+                <button type="button">#Animals</button>
+            </div>
+        </article>
+
+        <article>
+            <a href="mimiKeel.html"><img src="photos/Mimi/Portrait_Nora.jpg" alt=" un potrait de Nora avec des lunettes"/></a>
+            <div class="description-article">
+                <h2>${photographer.name}</h2>
+                <h3>London, UK</h3>
+                <blockquote lang="en-GB">Voir le beau dans le quotidien</blockquote>
+                <p>400€/jour</p>
+            </div>
+            <div class="filtres-articles">
+                <button type="button">#Portrait</button>
+                <button type="button">#Events</button>
+                <button type="button">#Travel</button>
+                <button type="button">#Animals</button>
+            </div>
+        </article>
+    `
+
+  }
+   
+    
+})
+.catch(function () {
+    this.dataError = true;
+})
+};
+
+
+
+
+then(function(data) {
+  for(photographer of data.photographers) { 
+    main.innerHTML += `
+    <article>
+            <a href="mimiKeel.html"><img src="photos/Mimi/Portrait_Nora.jpg" alt=" un potrait de Nora avec des lunettes"/></a>
+            <div class="description-article">
+                <h2>${photographer.name}</h2>
+                <h3>London, UK</h3>
+                <blockquote lang="en-GB">Voir le beau dans le quotidien</blockquote>
+                <p>400€/jour</p>
+            </div>
+            <div class="filtres-articles">
+                <button type="button">#Portrait</button>
+                <button type="button">#Events</button>
+                <button type="button">#Travel</button>
+                <button type="button">#Animals</button>
+            </
+  }
+});
+*/
+
+
+const main = document.getElementById('main');
+
+
+// 1- Récupérer les données provenant du fichier JSON
+
+// 2 - Créer une méthode Factory pour créer automatiquement des profils
+
+// 3- Pour chaque objet, générer du HTML 
+
+
+import photographers from data;
+
+class photographeFactory{
+    create()
+}
+
+function createPhotographer (portrait,  name, city, country, tags,  tagline, price,id){
+
+    return {
+        portrait,
+        name,
+        city,
+        country, 
+        tags,  
+        tagline, 
+        price,
+        id,
+    }
+}
+
+
+const photographe1 = createPhotographer("hello",  "je", "suis", "france", "rien",  "hello", "2", "1");
+
+console.log (photographe1)
+
+
+for(photographer of data.photographers) { 
+    main.innerHTML += `
+    <article>
+            <a href="mimiKeel.html"><img src="photos/Mimi/Portrait_Nora.jpg" alt=" un potrait de Nora avec des lunettes"/></a>
+            <div class="description-article">
+                <h2>${photographer.name}</h2>
+                <h3>London, UK</h3>
+                <blockquote lang="en-GB">Voir le beau dans le quotidien</blockquote>
+                <p>400€/jour</p>
+            </div>
+            <div class="filtres-articles">
+                <button type="button">#Portrait</button>
+                <button type="button">#Events</button>
+                <button type="button">#Travel</button>
+                <button type="button">#Animals</button>
+            </
+  }
+
+// Récupération des photographes
+function readJson(){
+    fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/FishEyeDataFR.json',{
+        method: "POST",
+        headers: {
+            'content-Type': 'application/json'
+        },
+        body : JSON.stringify({
+            name1
+        }) 
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('success')
+        } else {
+            console.log('error')
+        }
+        
+    })
+    .then(data => {
+       for(photographer of data.photographer); 
+    });
+
+    console.log(data);
+};
+
+import photographers from "/Users/edebe/OneDrive/Bureau/OpenClassRoom/projet-6/json/donnees.json";
+
+class photographeFactory{
+    create(o)
+}
+function createPhotographer (portrait,  name, city, country, tags,  tagline, price,id){
+
+    return {
+        portrait,
+        name,
+        city,
+        country, 
+        tags,  
+        tagline, 
+        price,
+        id,
+    }
+}
+
+
+const photographe1 = createPhotographer("hello",  "je", "suis", "france", "rien",  "hello", "2", "1");
+
+console.log (photographe1)
+
+
+ 
+

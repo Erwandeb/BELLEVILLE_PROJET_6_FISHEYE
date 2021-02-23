@@ -1,3 +1,5 @@
+
+let data =
 {
     "photographers": [
       {
@@ -61,7 +63,6 @@
         "portrait": "MarcelNikolic.jpg"
       }
     ],
-    
     "media": [
       {
         "id": 342550,
