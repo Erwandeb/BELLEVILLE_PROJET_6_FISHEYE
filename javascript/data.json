@@ -8,7 +8,8 @@
         "tags": ["portrait", "events", "travel", "animals"],
         "tagline": "Voir le beau dans le quotidien",
         "price": 400,
-        "portrait": "MimiKeel.jpg"
+        "portrait": "MimiKeel.jpg",
+        "description": "Une jeune fille brune de profil"
       },
       {
         "name": "Ellie-Rose Wilkens",
@@ -18,7 +19,8 @@
         "tags": ["sports", "architecture"],
         "tagline": "Capturer des compositions complexes",
         "price": 250,
-        "portrait": "EllieRoseWilkens.jpg"
+        "portrait": "EllieRoseWilkens.jpg",
+        "description": "Une jeune fille avec des lunettes et des cheveux multicolor"
       },
       {
         "name": "Tracy Galindo",
@@ -28,7 +30,8 @@
         "tags": ["art", "fashion", "events"],
         "tagline": "Photographe freelance",
         "price": 500,
-        "portrait": "TracyGalindo.jpg"
+        "portrait": "TracyGalindo.jpg",
+        "description": "Un jeune homme  brun avec une longue barbe et des cheveux bouclés"
       },
       {
         "name": "Nabeel Bradford",
@@ -38,7 +41,8 @@
         "tags": ["travel", "portrait"],
         "tagline": "Toujours aller de l'avant",
         "price": 350,
-        "portrait": "NabeelBrandford.jpg"
+        "portrait": "NabeelBrandford.jpg",
+        "description": "Un couché de soleil avec un homme et son appareil photo"
       },
       {
         "name": "Rhode Dubois",
@@ -48,7 +52,8 @@
         "tags": ["sport", "fashion", "events", "animals"],
         "tagline": "Je crée des souvenirs",
         "price": 275,
-        "portrait": "RhodeDubois.jpg"
+        "portrait": "RhodeDubois.jpg",
+        "description": "Un potrait de jeune fille qui sourit face a l'objectif photo"
       },
       {
         "name": "Marcel Nikolic",
@@ -58,7 +63,8 @@
         "tags": ["travel", "architecture"],
         "tagline": "Toujours à la recherche de LA photo",
         "price": 300,
-        "portrait": "MarcelNikolic.jpg"
+        "portrait": "MarcelNikolic.jpg",
+        "description": "un homme barbu qui regle son appareil photo"
       }
     ],
     "media": [
