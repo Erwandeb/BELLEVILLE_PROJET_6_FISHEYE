@@ -121,6 +121,14 @@ for(photographer of data.photographers) {
                 <button type="button">#Travel</button>
                 <button type="button">#Animals</button>
             </
+
+
+  <div class="filtres-articles">
+                    <button type="button">#${photographer.tags[0]}</button>
+                    <button type="button">#${photographer.tags[1]}</button>
+                    <button type="button">#${photographer.tags[2]}</button>
+                    <button type="button">#${photographer.tags[3]}</button>
+                </div>
   }
 
 // Récupération des photographes
@@ -173,6 +181,27 @@ const photographe1 = createPhotographer("hello",  "je", "suis", "france", "rien"
 
 console.log (photographe1)
 
+modifs 24/02
 
+  <div class="filtres-articles">
+                    <button type="button">#${photographer.tags[i]}</button>
+            </div>
+
+ const taglist = tags[i].photographer
+        for( let i = 0;taglist.length;i++){
+            article.innerHTML+= `
+            `
+        }
  
+
+
+filter.forEach((filterElement) => {
+      filterElement.addEventListener('click', ()=>{
+          console.log("");
+      })
+
+      const filtreValeur = filterElement.getAttribute('data-list');
+      console.log(filtreValeur);
+
+  })
 
