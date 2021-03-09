@@ -1,16 +1,30 @@
-
 // Variables
 const mainDiv = document.getElementById('main');
-const filtresArticles = document.querySelector('.filtres-articles');
 
 
-// Récupération des données JSON
+// Création de la class photographer
+class Photographer {
+    constructor(id, name, description, city, country, tags, tagline, price, portrait ){
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.city = city;
+        this.country = country;
+        this.tags = tags;
+        this.tagline = tagline;
+        this.price = price;
+        this.portrait = portrait;
+    }
+}
+
+// Affichage des photographes (données JSON) au chargement de la page
 fetch('javascript/data.json')
   .then((response) => response.json())
-  .then(function (data) {
-   
-// Création d'un bloc HTML par photographe
-    for(photographer of data.photographers) {
+  .then(function (data){
+
+    for(item of data.photographers) {
+        const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait)
+        
         mainDiv.innerHTML += `
         <article>
                 <a href="mimiKeel.html"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
@@ -21,16 +35,18 @@ fetch('javascript/data.json')
                     <blockquote>${photographer.tagline}</blockquote>
                     <p>${photographer.price}€ /jour</p>
                 </div>
-                <div class="filtres-articles">
-                    <span class= "tagsSpecialist">#${photographer.tags[0]}</span>
-                    <span class= "tagsSpecialist">#${photographer.tags[1]}</span>
-                    <span class= "tagsSpecialist">#${photographer.tags[2]}</span>
-                    <span class= "tagsSpecialist">#${photographer.tags[3]}</span>
-                </div>
+                <div id="filtres-articles-${photographer.id}"></div>
         </article>  
-     `;
+        `;
+            // récupération des tags
+            const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
+            for(tag of photographer.tags){
+                filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
+                // console.log(tag)
+            }
     }
-  });
+});
+
 
 
 
