@@ -24,7 +24,7 @@ fetch('javascript/data.json')
 
     for(item of data.photographers) {
         const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait)
-        
+
         mainDiv.innerHTML += `
         <article>
                 <a href="mimiKeel.html"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"

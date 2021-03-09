@@ -34,6 +34,8 @@ eventsFiltre.addEventListener('click', filtrerPhotographe);
 
 function filtrerPhotographe() {
 
+    mainDiv.innerHTML = '';
+
     let filtreActif = this.dataset.filter;
     console.log("le filtre choisi est : " , filtreActif);
     let photographerMatchList = [];
@@ -54,18 +56,11 @@ function filtrerPhotographe() {
                             //console.log("bonjour" , element)
                             console.log("liste des photographes correspondant au filtre actif :", photographerMatchList);
                         }
+
                     });
                 }
         }
-        return photographerMatchList ;
-    });
-
-    fetch(photographerMatchList)
-    .then(function (data) { 
-
-        for(item of data.photographers) {
-            const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait)
-            
+        for(photographer of photographerMatchList){
             mainDiv.innerHTML += `
             <article>
                     <a href="mimiKeel.html"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
@@ -79,15 +74,17 @@ function filtrerPhotographe() {
                     <div id="filtres-articles-${photographer.id}"></div>
             </article>  
             `;
-                // récupération des tags
-                const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
-                for(tag of photographer.tags){
-                    filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
-                    // console.log(tag)
-                }
+             // récupération des tags
+             const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
+             for(tag of photographer.tags){
+                 filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
+                 // console.log(tag)
+             }
         }
         
     });
+
+
 };
 
 
