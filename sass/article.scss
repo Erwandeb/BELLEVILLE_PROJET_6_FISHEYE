@@ -93,7 +93,11 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                  font-weight: lighter;
                  font-size: 45px;
                  color: $primaryColor2;
-                 letter-spacing: 2px;
+                 letter-spacing: 1px;
+                 width:300px;
+                 height: 118px;
+                 display: flex;
+                 text-align: start;
              }
              h3{
                 margin:0px;
@@ -107,24 +111,107 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 font-size: small;
                 color:$secondaryColor2;
              }
-            .filtres-articles{
-                margin: 0px;
-               button{
-                border-radius: 20px;
-                padding:5px;
-                background-color: white;
-                color: $primaryColor1;
-                border: none;
-                font-weight: bold;
-                font-size: small;
-                cursor: pointer;
-                &:hover{
-                    background-color: $primaryColor1;
-                    color:white;
+
+           
+                #filtres-articles-243{
+                    height: 10px;
+                    span{
+                        border-radius: 20px;
+                        padding:5px;
+                        margin: 2px;
+                        background-color: white;
+                        color: $primaryColor1;
+                        border: 1px solid grey;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
                 }
-               }
+    
+                #filtres-articles-930{
+                    height: 10px;
+                    span{
+                        border-radius: 20px;
+                        padding:5px;
+                        margin: 2px;
+                        background-color: white;
+                        color: $primaryColor1;
+                        border: 1px solid grey;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
+    
+                #filtres-articles-82{
+                    height: 10px;
+                    span{
+                        border-radius: 20px;
+                        padding:5px;
+                        margin: 2px;
+                        background-color: white;
+                        color: $primaryColor1;
+                        border: 1px solid grey;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
+    
+                #filtres-articles-527{
+                    height: 10px;
+                    span{
+                        border-radius: 20px;
+                        padding:5px;
+                        margin: 2px;
+                        background-color: white;
+                        color: $primaryColor1;
+                        border: 1px solid grey;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
+    
+                #filtres-articles-925{
+                    height: 10px;
+                    span{
+                        border-radius: 20px;
+                        padding:5px;
+                        margin: 2px;
+                        background-color: white;
+                        color: $primaryColor1;
+                        border: 1px solid grey;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
+    
+                #filtres-articles-195{
+                    height: 10px;
+                    span{
+                        border-radius: 20px;
+                        padding:5px;
+                        margin: 2px;
+                        background-color: white;
+                        color: $primaryColor1;
+                        border: 1px solid grey;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
+    
+                #filtres-articles-243{
+                    height: 10px;
+                    span{
+                        border-radius: 20px;
+                        padding:5px;
+                        margin: 2px;
+                        background-color: white;
+                        color: $primaryColor1;
+                        border: 1px solid grey;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
                 
-            }
+            
         }
 
         a{
@@ -226,7 +313,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         }
 
 /*--- Description image du carroussel ----*/
-        .carroussel{
+        #carroussel{
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap:15px;
@@ -380,20 +467,17 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         border-radius: 5px;
         box-shadow: 4px 17px 20px 1px black;
         
-        .titre-nom{
+        #formIntroduction{
            display: flex;
            flex-direction: column;
            justify-content: center;
            height: 135px;
            margin-bottom: 50px;
            position: relative;
-          
-
             h1{
                 font-size: 62px;
                 font-weight : 500;
                 margin:0px;
-    
             }
             h2{
                 font-size: 62px;
@@ -401,7 +485,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 margin:0px;
             }
         }
-       .closeBtn{
+       #closeBtn{
         position: absolute;
         top: -5px;
         right: 67px;

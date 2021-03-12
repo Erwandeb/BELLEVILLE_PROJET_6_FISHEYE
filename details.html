@@ -23,22 +23,7 @@
         <a href="index.html"><img src="photos/logo-fisheye.png" alt="logo de fishEye"/></a>
     </header>
 
-    <main>
-        <div class="presentation">
-            <h2>Mimi Keel</h2>
-            <h3>London, UK</h3>
-            <blockquote lang="en-GB">Voir le beau dans le quotidien</blockquote>
-        
-            <div class="filtres-articles">
-                <button type="button">#Portrait</button>
-                <button type="button">#Events</button>
-                <button type="button">#Travel</button>
-                <button type="button">#Animals</button>
-            </div>
-        </div>
-
-        <a href="mimiKeel.html"><img src="photos/Mimi/Portrait_Nora.jpg" alt=" un potrait de Nora avec des lunettes"/></a>
-    </main>
+    <main id="mainDivDetail"></main>
    
     <div class="contact"><button type ="button">Contactez-moi</button></div>
 
@@ -54,75 +39,7 @@
             </nav>
         </div>
 
-        <div class="carroussel">
-
-            <div class="carroussel-card">
-                <img class="carroussel-img" src="photos/Mimi/Animals_Rainbow.jpg" alt=" Un martin pecheur sur une branche"/>
-                <div class="description-image">
-                    <p>Arc-en-ciel</p>
-                    <div class="prix-like">
-                        <p>70 €</p>
-                       <div class="like-compteur"> <span class="like1">12</span><span class="heart1"><i class="fas fa-heart"></i></span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carroussel-card">
-                <img  class="carroussel-img" src="photos/Mimi/Travel_Lonesome.jpg" alt=" Un humain au sommet d'une montagne"/>
-                <div class="description-image">
-                    <p>Solitude</p>
-                    <div class="prix-like">
-                        <p>70 €</p>
-                        <div class="like-compteur"> <span class="like2">12</span><span class="heart2"><i class="fas fa-heart"></i></span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carroussel-card">
-                <img class="carroussel-img" src="photos/Mimi/Event_SeasideWedding.jpg" alt=" Une grande table avec le couvert dressé pour un mariage"/>
-                <div class="description-image">
-                    <p>Mariage à la mer</p>
-                    <div class="prix-like">
-                        <p>70 €</p>
-                        <div class="like-compteur"> <span class="like3">12</span><span class="heart3"><i class="fas fa-heart"></i></span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carroussel-card">
-                <img class="carroussel-img" src="photos/Mimi/Portrait_Background.jpg" alt=" Une jeune fille en noir et blanc"/>
-                <div class="description-image">
-                    <p>Arc-en-ciel</p>
-                    <div class="prix-like">
-                        <p>70 €</p>
-                        <div class="like-compteur"> <span class="like4">12</span><span class="heart4"><i class="fas fa-heart"></i></span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carroussel-card">
-                <img  class="carroussel-img" src="photos/Mimi/Event_PintoWedding.jpg" alt=" Une photo de mariage en plein été"/>
-                <div class="description-image">
-                    <p>Arc-en-ciel</p>
-                    <div class="prix-like">
-                        <p>70 €</p>
-                        <div class="like-compteur"> <span class="like5">12</span><span class="heart5"><i class="fas fa-heart"></i></span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carroussel-card">
-                <img class="carroussel-img" src="photos/Mimi/Portrait_Wednesday.jpg" alt=" Une enfant qui se tient accroupie pour reflechir"/>
-                <div class="description-image">
-                    <p>Arc-en-ciel</p>
-                    <div class="prix-like">
-                        <p>70 €</p>
-                        <div class="like-compteur"> <span class="like6">12</span><span class="heart6"><i class="fas fa-heart"></i></span></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <div id="carroussel"></div>
         
     </section>
 
@@ -197,11 +114,7 @@
     <!-- fenetre modale--> 
     <div class="fenetre-modale">
             <div class="formulaire">
-                <div class="titre-nom">
-                    <h1>Contactez-moi</h1>
-                    <h2>Mimi Keel</h2>
-                    <div class="closeBtn"><img  src="photos/svg/cross white.svg" alt=" Croix pour fermer la modale"/></div>
-                </div>
+                <div id="formIntroduction"></div>
         
                 <form id ="form" action="#">
 
@@ -231,14 +144,9 @@
     </div>
 
       <!-- footer--> 
-    <footer>
-        <div class="compte-like">
-            <span class="like">297 081 </span><i class="fas fa-heart"></i>
-        </div>
-        <p>300€/jour</p>
-    </footer>
+    <footer></footer>
 
-    <script type="text/javascript" src="javascript/modale.js"></script>
+   <!--<script type="text/javascript" src="javascript/modale.js"></script>--> 
     <script type="text/javascript" src="javascript/ligthbox.js"></script>
     <script type="text/javascript" src="javascript/incrementation.js"></script>
     <script type="text/javascript" src="json/donnees.json"></script>

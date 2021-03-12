@@ -87,7 +87,11 @@ main .presentation h2 {
   font-weight: lighter;
   font-size: 45px;
   color: #D3573C;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  width: 300px;
+  height: 118px;
+  display: flex;
+  text-align: start;
 }
 main .presentation h3 {
   margin: 0px;
@@ -101,22 +105,96 @@ main .presentation blockquote {
   font-size: small;
   color: #525252;
 }
-main .presentation .filtres-articles {
-  margin: 0px;
+main .presentation #filtres-articles-243 {
+  height: 10px;
 }
-main .presentation .filtres-articles button {
+main .presentation #filtres-articles-243 span {
   border-radius: 20px;
   padding: 5px;
+  margin: 2px;
   background-color: white;
   color: #901C1C;
-  border: none;
+  border: 1px solid grey;
   font-weight: bold;
-  font-size: small;
-  cursor: pointer;
+  font-size: x-small;
 }
-main .presentation .filtres-articles button:hover {
-  background-color: #901C1C;
-  color: white;
+main .presentation #filtres-articles-930 {
+  height: 10px;
+}
+main .presentation #filtres-articles-930 span {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+  color: #901C1C;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: x-small;
+}
+main .presentation #filtres-articles-82 {
+  height: 10px;
+}
+main .presentation #filtres-articles-82 span {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+  color: #901C1C;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: x-small;
+}
+main .presentation #filtres-articles-527 {
+  height: 10px;
+}
+main .presentation #filtres-articles-527 span {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+  color: #901C1C;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: x-small;
+}
+main .presentation #filtres-articles-925 {
+  height: 10px;
+}
+main .presentation #filtres-articles-925 span {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+  color: #901C1C;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: x-small;
+}
+main .presentation #filtres-articles-195 {
+  height: 10px;
+}
+main .presentation #filtres-articles-195 span {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+  color: #901C1C;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: x-small;
+}
+main .presentation #filtres-articles-243 {
+  height: 10px;
+}
+main .presentation #filtres-articles-243 span {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+  color: #901C1C;
+  border: 1px solid grey;
+  font-weight: bold;
+  font-size: x-small;
 }
 main a {
   align-items: center;
@@ -212,25 +290,25 @@ section .trier nav ul li {
   display: flex;
   margin-left: 29px;
 }
-section .carroussel {
+section #carroussel {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 15px;
   grid-row: 6;
 }
-section .carroussel .carroussel-card {
+section #carroussel .carroussel-card {
   width: 250px;
   margin-left: 40px;
   margin-right: 40px;
 }
-section .carroussel .carroussel-card img {
+section #carroussel .carroussel-card img {
   width: 250px;
   height: 250px;
   border-radius: 5px;
   object-fit: cover;
   cursor: pointer;
 }
-section .carroussel .carroussel-card .description-image {
+section #carroussel .carroussel-card .description-image {
   width: 250px;
   display: flex;
   justify-content: space-between;
@@ -240,25 +318,25 @@ section .carroussel .carroussel-card .description-image {
   height: 70px;
   padding-top: 5px;
 }
-section .carroussel .carroussel-card .description-image p {
+section #carroussel .carroussel-card .description-image p {
   margin: 0px;
 }
-section .carroussel .carroussel-card .prix-like {
+section #carroussel .carroussel-card .prix-like {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 5px;
   width: 90px;
 }
-section .carroussel .carroussel-card .prix-like p {
+section #carroussel .carroussel-card .prix-like p {
   margin: 0px;
 }
-section .carroussel .carroussel-card .prix-like .like-compteur {
+section #carroussel .carroussel-card .prix-like .like-compteur {
   width: 50px;
   display: flex;
   justify-content: flex-end;
 }
-section .carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
+section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
   cursor: pointer;
   margin-left: 3px;
 }
@@ -356,7 +434,7 @@ section .carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
   border-radius: 5px;
   box-shadow: 4px 17px 20px 1px black;
 }
-.fenetre-modale .formulaire .titre-nom {
+.fenetre-modale .formulaire #formIntroduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,17 +442,17 @@ section .carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
   margin-bottom: 50px;
   position: relative;
 }
-.fenetre-modale .formulaire .titre-nom h1 {
+.fenetre-modale .formulaire #formIntroduction h1 {
   font-size: 62px;
   font-weight: 500;
   margin: 0px;
 }
-.fenetre-modale .formulaire .titre-nom h2 {
+.fenetre-modale .formulaire #formIntroduction h2 {
   font-size: 62px;
   font-weight: 500;
   margin: 0px;
 }
-.fenetre-modale .formulaire .closeBtn {
+.fenetre-modale .formulaire #closeBtn {
   position: absolute;
   top: -5px;
   right: 67px;

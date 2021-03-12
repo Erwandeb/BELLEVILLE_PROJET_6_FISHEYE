@@ -64,7 +64,7 @@ function filtrerPhotographe() {
         for(photographer of photographerMatchList){
             mainDiv.innerHTML += `
             <article>
-                    <a href="mimiKeel.html"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
+                    <a href="details.html?id=${photographer.id}"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
                             alt="${photographer.description}"/></a>
                     <div class="description-article">
                         <h2>${photographer.name}</h2>
@@ -100,7 +100,7 @@ fetch('javascript/data.json')
 
         mainDiv.innerHTML += `
         <article>
-                <a href="mimiKeel.html"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
+                <a href="details.html?id=${photographer.id}"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
                         alt="${photographer.description}"/></a>
                 <div class="description-article">
                     <h2>${photographer.name}</h2>
