@@ -28,7 +28,7 @@ fetch('javascript/data.json')
         // Affichage écran acceuil
         mainDiv.innerHTML += `
         <article>
-                <a href="#"><img id="photoProfil-${photographer.id}" onclick= "return this" src="photos/Photographers-ID-Photos/${photographer.portrait}"
+                <a href="details.html?id=${photographer.id}"><img id="photoProfil-${photographer.id}" onclick= "console.log(this)" src="photos/Photographers-ID-Photos/${photographer.portrait}"
                         alt="${photographer.description}"/></a>
                 <div class="description-article">
                     <h2>${photographer.name}</h2>
@@ -48,10 +48,7 @@ fetch('javascript/data.json')
 
         
         // Affichage profil photographe 
-        const photoProfil = this
-            console.log(photoProfil);
-            //console.log("bonjour ", photographer.id );
-
+    
 
             
     }
