@@ -25,9 +25,10 @@ fetch('javascript/data.json')
     for(item of data.photographers) {
         const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait)
 
+        // Affichage écran acceuil
         mainDiv.innerHTML += `
         <article>
-                <a href="mimiKeel.html"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
+                <a href="#"><img id="photoProfil-${photographer.id}" onclick= "return this" src="photos/Photographers-ID-Photos/${photographer.portrait}"
                         alt="${photographer.description}"/></a>
                 <div class="description-article">
                     <h2>${photographer.name}</h2>
@@ -38,14 +39,24 @@ fetch('javascript/data.json')
                 <div id="filtres-articles-${photographer.id}"></div>
         </article>  
         `;
+
             // récupération des tags
             const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
             for(tag of photographer.tags){
                 filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
-                // console.log(tag)
             }
+
+        
+        // Affichage profil photographe 
+        const photoProfil = this
+            console.log(photoProfil);
+            //console.log("bonjour ", photographer.id );
+
+
+            
     }
 });
+
 
 
 
