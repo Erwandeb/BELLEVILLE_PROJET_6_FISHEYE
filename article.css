@@ -607,6 +607,7 @@ footer .fa-heart {
   main .presentation {
     width: 240px;
     padding-left: 4%;
+    height: 240px;
   }
   main .presentation h2 {
     font-size: xx-large;
