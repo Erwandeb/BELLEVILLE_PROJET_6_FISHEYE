@@ -25,18 +25,16 @@
 
     <main id="mainDivDetail"></main>
    
-    <div class="contact"><button type ="button">Contactez-moi</button></div>
+    
 
     <section>
         <div class="trier">
-            <p>Trier par :</p>
-            <nav>
-                <ul>
-                    <li> Popularité</li>
-                    <li> Date </li>
-                    <li> Titre </li>
-                </ul>
-            </nav>
+            <label>Trier par  : </label>
+            <select>
+                <option value="popularite">Popularité</option>
+                <option value="date">Date</option>
+                <option value="titre">Titre</option>
+            </select>
         </div>
 
         <div id="carroussel"></div>
@@ -115,7 +113,8 @@
     <div class="fenetre-modale">
             <div class="formulaire">
                 <div id="formIntroduction"></div>
-        
+
+                <div id="closeBtn"><img  src="photos/svg/cross white.svg" alt=" Croix pour fermer la modale"/></div>
                 <form id ="form" action="#">
 
                     <label for="firstname">Prénom </label><div class="errorFirstName"></div>
@@ -144,6 +143,7 @@
     </div>
 
       <!-- footer--> 
+      <div class="contact"><button type ="button">Contactez-moi</button></div>
     <footer></footer>
 
    <!--<script type="text/javascript" src="javascript/modale.js"></script>--> 

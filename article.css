@@ -251,44 +251,40 @@ section .trier {
   position: relative;
   width: 40%;
   margin-left: 40px;
-  height: 80px;
+  margin-bottom: 20px;
 }
 section .trier p {
   width: 85px;
   font-weight: bold;
 }
-section .trier nav {
-  display: flex;
-  justify-content: center;
-}
-section .trier nav ul {
-  background-color: #901C1C;
-  list-style-type: none;
-  display: inline-block;
-  align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 140px;
-  padding: 0px;
-  border-radius: 5px;
-  justify-content: center;
-  justify-self: center;
-  position: absolute;
-  top: 5px;
-  left: 82px;
-}
-section .trier nav ul li {
-  width: 60%;
-  height: 37px;
-  list-style-type: none;
-  padding: 0px;
-  border-top: 1px solid white;
-  align-items: center;
+section .trier label {
   font-weight: bold;
-  color: white;
-  justify-content: flex-start;
+  width: 75px;
   display: flex;
-  margin-left: 29px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+section .trier select {
+  background-color: #901C1C;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 50px;
+  padding-left: 5px;
+  border: 1px solid white;
+}
+section .trier option {
+  height: 50px;
+  padding-left: 5px;
+  border: white;
+  border: 1px solid white;
 }
 section #carroussel {
   display: grid;
@@ -330,6 +326,7 @@ section #carroussel .carroussel-card .prix-like {
 }
 section #carroussel .carroussel-card .prix-like p {
   margin: 0px;
+  width: 50px;
 }
 section #carroussel .carroussel-card .prix-like .like-compteur {
   width: 50px;
@@ -339,6 +336,9 @@ section #carroussel .carroussel-card .prix-like .like-compteur {
 section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
   cursor: pointer;
   margin-left: 3px;
+}
+section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
+  transform: scale(1.15);
 }
 
 /* -------LightBox------------*/
@@ -577,7 +577,7 @@ footer .fa-heart {
 
 @media screen and (max-width: 426px) {
   body {
-    width: 320px;
+    width: 100%;
     font-family: "DM Sans", sans-serif;
     margin: auto;
     align-items: center;
@@ -602,59 +602,65 @@ footer .fa-heart {
   /*------Description photographe avec photo ID----------*/
   main {
     width: 100%;
-    height: auto;
-    background-color: green;
+    height: 240px;
   }
   main .presentation {
     width: 240px;
-    padding-left: 0px;
+    padding-left: 4%;
   }
   main .presentation h2 {
     font-size: xx-large;
+    height: auto;
+    width: 65%;
   }
   main .presentation h3 {
     font-size: large;
   }
   main a img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 80px;
+    right: 10px;
   }
 
   .contact {
     position: sticky;
-    bottom: 0;
-    right: 0;
+    bottom: 3%;
+    left: 25%;
     width: 170px;
+    height: 36px;
   }
   .contact button {
     width: 100%;
+    height: 36px;
   }
 
   /*--- Description image du carroussel ----*/
   section .trier {
     display: none;
   }
-  section .carroussel {
+  section #carroussel {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
     margin-top: 40px;
+    margin-left: 4%;
+    margin-right: 4%;
   }
-  section .carroussel .carroussel-card {
-    width: 250px;
-    margin-left: 40px;
-    margin-right: 40px;
+  section #carroussel .carroussel-card {
+    width: 100%;
   }
-  section .carroussel .carroussel-card img {
-    width: 250px;
+  section #carroussel .carroussel-card img {
+    width: 100%;
     height: 250px;
     border-radius: 5px;
     object-fit: cover;
     cursor: pointer;
   }
-  section .carroussel .carroussel-card .description-image {
-    width: 250px;
+  section #carroussel .carroussel-card .description-image {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     color: #901C1C;
@@ -663,25 +669,25 @@ footer .fa-heart {
     height: 70px;
     padding-top: 5px;
   }
-  section .carroussel .carroussel-card .description-image p {
+  section #carroussel .carroussel-card .description-image p {
     margin: 0px;
   }
-  section .carroussel .carroussel-card .prix-like {
+  section #carroussel .carroussel-card .prix-like {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 5px;
     width: 90px;
   }
-  section .carroussel .carroussel-card .prix-like p {
+  section #carroussel .carroussel-card .prix-like p {
     margin: 0px;
   }
-  section .carroussel .carroussel-card .prix-like .like-compteur {
+  section #carroussel .carroussel-card .prix-like .like-compteur {
     width: 50px;
     display: flex;
     justify-content: flex-end;
   }
-  section .carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
+  section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
     cursor: pointer;
     margin-left: 3px;
   }

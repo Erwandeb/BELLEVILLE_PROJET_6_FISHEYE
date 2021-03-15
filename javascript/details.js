@@ -1,6 +1,7 @@
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
 
+// Déclaration des classes 
 class Photographer {
     constructor(id, name, description, city, country, tags, tagline, price, portrait) {
       this.id = id;
@@ -15,12 +16,13 @@ class Photographer {
     }
   }
   
-
   class Media {
-    constructor(id, photographerId, image , tags, likes, date, price ){
+    constructor(id, photographerId, image, video, titre, tags, likes, date, price ){
         this.id = id;
         this.photographerId = photographerId;
         this.image = image;
+        this.video = video;
+        this.titre = titre;
         this.tags = tags;
         this.likes = likes;
         this.date = date;
@@ -28,6 +30,7 @@ class Photographer {
     }
 }
 
+// Récupération des données 
   fetch('javascript/data.json')
     .then((response) => response.json())
     .then(function (data) {
@@ -44,8 +47,8 @@ class Photographer {
         photographerData[0].portrait
       );
 
+      // Gestion du début de la page 
       const mainDivDetail = document.getElementById('mainDivDetail');
-     
       mainDivDetail.innerHTML +=`
         <main id="mainDivDetail">
             <div class="presentation">
@@ -74,38 +77,62 @@ class Photographer {
             data.id,
             data.photographerId,
             data.image,
+            data.video,
+            data.titre,
             data.tags,
             data.likes,
             data.date,
             data.price,
         )
 
-           /*
-      "id": 342550,
-        "photographerId": 82,
-        "image": "Fashion_Yellow_Beach.jpg",
-        "tags": ["fashion"],
-        "likes": 62,
-        "date": "2011-12-08",
-        "price": 55
-      */
      
+        
+        
+     
+        // Gestion du carroussel
        const carroussel = document.getElementById('carroussel');
-       //console.log(carroussel)
        console.log(media.price)
        carroussel.innerHTML += `
         <div class="carroussel-card">
             <img class="carroussel-img" src="photos/${media.photographerId}/${media.image}" alt=""/>
             <div class="description-image">
-            <p>Arc-en-ciel</p>
+            <p>${media.titre}</p>
             <div class="prix-like">
                <p>${media.price} €</p>
-              <div class="like-compteur"> <span class="likeCounter">${media.likes}</span><span class="heart1"><i class="fas fa-heart"></i></span></div>
+              <div class="like-compteur"> <span class="likeCounter"></span><span class="likeTrigger"><i class="fas fa-heart"></i></span></div>
             </div>
             </div>
         </div>`;
       }
      
+      const likeTrigger = document.getElementsByClassName('likeTrigger');
+      let compteurLike = data.likes;
+
+       for(let i=0; i<likeTrigger.length ; i++){
+        try{throw i}
+        catch(ii){
+           console.log(ii)
+        }
+       }
+       likeTrigger.addEventListener('click', isLiked )
+
+       for(let i=0; i<compteurLike.length ; i++){
+        try{throw i}
+        catch(ii){
+            console.log("ouille" , ii);
+        }
+       }
+
+
+      function isLiked() {
+        let compteurLike = data.likes;
+        console.log("compteur like", compteurLike)
+        compteurLike++;
+        console.log("ca monte ! ", compteurLike)
+      }
+   
+
+      // Gestion du Footer
       const footer = document.querySelector("footer");
       footer.innerHTML +=`
         <div class="compte-like">
@@ -113,19 +140,20 @@ class Photographer {
         </div>
         <p>${photographer.price} €/jour</p>`
       
+
+
+
     /* ------------------------ Gestion du formulaire ----------------------------*/
 
     const contactMe = document.querySelector('.contact');
     const modal = document.querySelector('.fenetre-modale');
     const closeBtn = document.getElementById('closeBtn');
-    console.log(closeBtn);
     const formIntroduction = document.getElementById('formIntroduction');
 
     formIntroduction.innerHTML +=`
         <div>
             <h1>Contactez-moi</h1>
             <h2>${photographer.name}</h2>
-            <div id="closeBtn"><img  src="photos/svg/cross white.svg" alt=" Croix pour fermer la modale"/></div>
         </div>
     `;
 
