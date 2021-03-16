@@ -303,7 +303,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 height: 50px;
                 padding-left: 5px;
                 border: white;
-                border: 1px solid white
+                border: 1px solid white;
             }
         }
 
@@ -669,11 +669,11 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
 
         a{
             img{
-                width: 110px;
-                height: 110px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
-                top: 80px;
-                right: 10px;
+                top: 30px;
+                right: 15px;
               
             }
         }
@@ -683,7 +683,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     .contact{
         position:sticky; 
         bottom: 3%;
-        left: 25%;
+        left: 30%;
         width: 170px;
         height: 36px;
         button{
@@ -753,6 +753,166 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     
     }
     
+/*-------Formulaire------------*/
+.fenetre-modale{
+    display: none;
+    z-index: 13;
+   position: fixed;
+    width: 100%;
+
+    
+    .formulaire{
+        height:auto;
+        width:100%;
+        background-color: $secondaryColor1;
+        display: flex;
+        flex-direction: column;
+        padding:20px;
+        position: absolute;
+        top: 0px;
+        right:0px;
+        border-radius: 5px;
+        box-shadow: 4px 17px 20px 1px black;
+        
+        #formIntroduction{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           height: 135px;
+           margin-bottom: 50px;
+           position: relative;
+            h1{
+                font-size: 30px;
+                font-weight : 500;
+                margin:0px;
+            }
+            h2{
+                font-size: 30px;
+                font-weight : 500;
+                margin:0px;
+            }
+        }
+       #closeBtn{
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        color: white;
+        font-weight: 100;
+        font-size: 30px;
+        border-radius: none;
+        cursor: pointer;
+       }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 24px;
+            label{
+                font-weight: lighter;
+                font-size: 24px;
+                display: flex;
+                width: 100%;
+                height: auto;
+            }
+            input{
+                width: 100%;
+                height: 55px;
+                border-radius:5px;
+                border:none;
+                font-size: 24px;
+                padding-left: 10px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            textarea{
+                width: 100%;
+                height: 180px;
+                border-radius:5px;
+                border:none;
+                font-size: 35px;
+                padding-left: 10px;
+            }
+
+            .soumission{
+                color:white;
+                background-color:$primaryColor1;
+                width: 170px;
+                height:35px;
+                font-family: "DM sans";
+                font-size: 22px;
+                margin-top:30px;
+                margin-right: 50%;
+                border:none;
+                border-radius:5px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .errorFirstName{
+                font-size: large;
+                color : whitesmoke;
+            }
+            .errorlastName{
+                font-size: medium;
+                color : whitesmoke;
+            }
+            .erroreMail{
+                font-size: medium;
+                color : whitesmoke;
+
+            }
+            .erroreMessageText{
+                font-size: medium;
+                color : whitesmoke;
+
+            }
+        }
+    }
+}
+.fenetre-validation-formulaire{
+    height: 200px;
+    width:100%;
+    position:absolute;
+    top : 50%;
+    right : 18%;
+    background-color: $secondaryColor1;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 4px 17px 20px 1px black;
+
+    .contenu-fenetre-validation-formulaire{
+        height: 200px;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+            p{
+                font-size: larger;
+            }
+        
+        
+            a{
+            padding: 5px;
+            margin: 5px;
+            height: 45px;
+            background-color: #901C1C;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            font-family: "DM sans";
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            align-items: center;
+            display: flex;
+            }
+    }
+    
+}
+
     footer{
         display: none;
     }

@@ -618,17 +618,17 @@ footer .fa-heart {
     font-size: large;
   }
   main a img {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     position: absolute;
-    top: 80px;
-    right: 10px;
+    top: 30px;
+    right: 15px;
   }
 
   .contact {
     position: sticky;
     bottom: 3%;
-    left: 25%;
+    left: 30%;
     width: 170px;
     height: 36px;
   }
@@ -691,6 +691,155 @@ footer .fa-heart {
   section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart {
     cursor: pointer;
     margin-left: 3px;
+  }
+
+  /*-------Formulaire------------*/
+  .fenetre-modale {
+    display: none;
+    z-index: 13;
+    position: fixed;
+    width: 100%;
+  }
+  .fenetre-modale .formulaire {
+    height: auto;
+    width: 100%;
+    background-color: #D3573C;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 5px;
+    box-shadow: 4px 17px 20px 1px black;
+  }
+  .fenetre-modale .formulaire #formIntroduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 135px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .fenetre-modale .formulaire #formIntroduction h1 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0px;
+  }
+  .fenetre-modale .formulaire #formIntroduction h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0px;
+  }
+  .fenetre-modale .formulaire #closeBtn {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    color: white;
+    font-weight: 100;
+    font-size: 30px;
+    border-radius: none;
+    cursor: pointer;
+  }
+  .fenetre-modale .formulaire form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 24px;
+  }
+  .fenetre-modale .formulaire form label {
+    font-weight: lighter;
+    font-size: 24px;
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  .fenetre-modale .formulaire form input {
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    padding-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .fenetre-modale .formulaire form textarea {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    border: none;
+    font-size: 35px;
+    padding-left: 10px;
+  }
+  .fenetre-modale .formulaire form .soumission {
+    color: white;
+    background-color: #901C1C;
+    width: 170px;
+    height: 35px;
+    font-family: "DM sans";
+    font-size: 22px;
+    margin-top: 30px;
+    margin-right: 50%;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .fenetre-modale .formulaire form .errorFirstName {
+    font-size: large;
+    color: whitesmoke;
+  }
+  .fenetre-modale .formulaire form .errorlastName {
+    font-size: medium;
+    color: whitesmoke;
+  }
+  .fenetre-modale .formulaire form .erroreMail {
+    font-size: medium;
+    color: whitesmoke;
+  }
+  .fenetre-modale .formulaire form .erroreMessageText {
+    font-size: medium;
+    color: whitesmoke;
+  }
+
+  .fenetre-validation-formulaire {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    background-color: #D3573C;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 4px 17px 20px 1px black;
+  }
+  .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire p {
+    font-size: larger;
+  }
+  .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire a {
+    padding: 5px;
+    margin: 5px;
+    height: 45px;
+    background-color: #901C1C;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-family: "DM sans";
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
   }
 
   footer {

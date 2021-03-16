@@ -71,7 +71,6 @@ class Photographer {
         //Affichage des médias
       const mediaData = data.media.filter((media) => media.photographerId === parseInt(id));
       for (data of mediaData) {
-        console.log(data);
   
         const media = new Media(
             data.id,
@@ -91,7 +90,6 @@ class Photographer {
      
         // Gestion du carroussel
        const carroussel = document.getElementById('carroussel');
-       console.log(media.price)
        carroussel.innerHTML += `
         <div class="carroussel-card">
             <img class="carroussel-img" src="photos/${media.photographerId}/${media.image}" alt=""/>
@@ -99,38 +97,61 @@ class Photographer {
             <p>${media.titre}</p>
             <div class="prix-like">
                <p>${media.price} €</p>
-              <div class="like-compteur"> <span class="likeCounter"></span><span class="likeTrigger"><i class="fas fa-heart"></i></span></div>
+              <div class="like-compteur"> <span class="likeCounter">${media.likes}</span><span id="likeTrigger${media.id}"><i class="fas fa-heart"></i></span></div>
             </div>
             </div>
         </div>`;
-      }
-     
-      const likeTrigger = document.getElementsByClassName('likeTrigger');
-      let compteurLike = data.likes;
 
-       for(let i=0; i<likeTrigger.length ; i++){
-        try{throw i}
-        catch(ii){
-           console.log(ii)
+        
+        // Fonction de tri par Select HTML
+        const selectElement = document.querySelector('select');
+        selectElement.addEventListener('change', triDetails)
+        let mediaList = [];
+
+        function triDetails() {
+            carroussel.innerHTML = "";
+            mediaList.push(media);
+            console.log(mediaList);
+
+            if(this.selectedIndex === 0 ){
+                mediaList.sort();
+            }
+
+            else if(this.selectedIndex === 1 ){
+                mediaList.sort();
+            }
+
+            else if(this.selectedIndex === 2 ){
+                mediaList.sort();
+                console.log("mediaList est trié ", mediaList)       
+            };
         }
-       }
-       likeTrigger.addEventListener('click', isLiked )
+        
 
-       for(let i=0; i<compteurLike.length ; i++){
-        try{throw i}
-        catch(ii){
-            console.log("ouille" , ii);
-        }
-       }
+    
+    // Fonction incrémentation
+    const likeTrigger = document.getElementById('likeTrigger'+media.id);
+    console.log(likeTrigger);
+    let likeTriggerList = [likeTrigger];
+
+    likeTriggerList.forEach(element =>{
+        likeTrigger.addEventListener('click', isLiked)
+        function isLiked() {
+        console.log("J'ai cliqué sur like")
+    }
+    })
+    
+    
+    
+       
+       
 
 
-      function isLiked() {
-        let compteurLike = data.likes;
-        console.log("compteur like", compteurLike)
-        compteurLike++;
-        console.log("ca monte ! ", compteurLike)
-      }
-   
+    };
+    
+      
+
+    
 
       // Gestion du Footer
       const footer = document.querySelector("footer");
@@ -149,7 +170,8 @@ class Photographer {
     const modal = document.querySelector('.fenetre-modale');
     const closeBtn = document.getElementById('closeBtn');
     const formIntroduction = document.getElementById('formIntroduction');
-
+    
+    console.log(contactMe);
     formIntroduction.innerHTML +=`
         <div>
             <h1>Contactez-moi</h1>
