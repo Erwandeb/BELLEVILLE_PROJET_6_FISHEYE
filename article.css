@@ -196,23 +196,16 @@ main .presentation #filtres-articles-243 span {
   font-weight: bold;
   font-size: x-small;
 }
-main a {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 335px;
-}
-main a img {
+main img {
   width: 175px;
   height: 175px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0px;
   box-shadow: 0px 6px 20px grey;
-  cursor: pointer;
-}
-main a img:hover {
-  transform: scale(1.1);
+  position: absolute;
+  right: 25px;
+  top: 77px;
 }
 
 /*------Bouton contactez moi-----*/
@@ -617,7 +610,7 @@ footer .fa-heart {
   main .presentation h3 {
     font-size: large;
   }
-  main a img {
+  main img {
     width: 120px;
     height: 120px;
     position: absolute;
@@ -628,7 +621,7 @@ footer .fa-heart {
   .contact {
     position: sticky;
     bottom: 3%;
-    left: 30%;
+    left: 25%;
     width: 170px;
     height: 36px;
   }
@@ -709,7 +702,7 @@ footer .fa-heart {
     padding: 20px;
     position: absolute;
     top: 0px;
-    right: 0px;
+    left: 0px;
     border-radius: 5px;
     box-shadow: 4px 17px 20px 1px black;
   }
@@ -718,7 +711,7 @@ footer .fa-heart {
     flex-direction: column;
     justify-content: center;
     height: 135px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     position: relative;
   }
   .fenetre-modale .formulaire #formIntroduction h1 {
@@ -733,19 +726,23 @@ footer .fa-heart {
   }
   .fenetre-modale .formulaire #closeBtn {
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 50px;
+    right: 80px;
     color: white;
     font-weight: 100;
     font-size: 30px;
     border-radius: none;
     cursor: pointer;
   }
+  .fenetre-modale .formulaire #closeBtn img {
+    width: 22px;
+    height: 22px;
+  }
   .fenetre-modale .formulaire form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 24px;
+    font-size: 22px;
   }
   .fenetre-modale .formulaire form label {
     font-weight: lighter;
@@ -753,20 +750,23 @@ footer .fa-heart {
     display: flex;
     width: 100%;
     height: auto;
+    margin-bottom: 2%;
   }
   .fenetre-modale .formulaire form input {
-    width: 100%;
+    width: 85%;
     height: 55px;
     border-radius: 5px;
     border: none;
     font-size: 24px;
     padding-left: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 5%;
+    align-items: center;
   }
   .fenetre-modale .formulaire form textarea {
-    width: 100%;
-    height: 180px;
+    width: 85%;
+    height: 140px;
     border-radius: 5px;
     border: none;
     font-size: 35px;
@@ -804,15 +804,16 @@ footer .fa-heart {
   }
 
   .fenetre-validation-formulaire {
-    height: 200px;
+    height: 100%;
     width: 100%;
     position: absolute;
-    top: 50%;
-    right: 18%;
+    top: 0px;
+    left: 0px;
     background-color: #D3573C;
     display: none;
     border-radius: 5px;
     box-shadow: 4px 17px 20px 1px black;
+    z-index: 100000;
   }
   .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire {
     height: 200px;
@@ -822,6 +823,7 @@ footer .fa-heart {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 70%;
   }
   .fenetre-validation-formulaire .contenu-fenetre-validation-formulaire p {
     font-size: larger;

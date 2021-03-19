@@ -1,5 +1,7 @@
+// Récupération de l'URL
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
+
 
 // Déclaration des classes 
 class Photographer {
@@ -47,31 +49,33 @@ class Photographer {
         photographerData[0].portrait
       );
 
-      // Gestion du début de la page 
+
+      // Affichage du début de la page 
       const mainDivDetail = document.getElementById('mainDivDetail');
       mainDivDetail.innerHTML +=`
         <main id="mainDivDetail">
             <div class="presentation">
-                <h2>${photographer.name}</h2>
-                <h3>${photographer.city}, ${photographer.country}</h3>
-                <blockquote>${photographer.tagline}</blockquote>
+                <h2 tabindex="3">${photographer.name}</h2>
+                <h3 tabindex="4">${photographer.city}, ${photographer.country}</h3>
+                <blockquote tabindex="5">${photographer.tagline}</blockquote>
       
-                <div id="filtres-articles-${photographer.id}"></div>
+                <div id="filtres-articles-${photographer.id}" tabindex="5"></div>
             </div>
 
-        <a href="mimiKeel.html"><img src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}"/></a>
+        <img src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}" tabindex="6"/>
         </main>`;
 
         const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
         for(tag of photographer.tags){
         filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
         };
-        
-        
+    
+
+    
+
         //Affichage des médias
       const mediaData = data.media.filter((media) => media.photographerId === parseInt(id));
       for (data of mediaData) {
-  
         const media = new Media(
             data.id,
             data.photographerId,
@@ -84,87 +88,91 @@ class Photographer {
             data.price,
         )
 
-     
-        
-        
-     
-        // Gestion du carroussel
+        // Affichage de chaque photos ou videos du photographe
        const carroussel = document.getElementById('carroussel');
        carroussel.innerHTML += `
-        <div class="carroussel-card">
-            <img class="carroussel-img" src="photos/${media.photographerId}/${media.image}" alt=""/>
+        <article class="carroussel-card" tabindex="${media.photographerId}">
+            <img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt=''/>  
             <div class="description-image">
             <p>${media.titre}</p>
             <div class="prix-like">
                <p>${media.price} €</p>
-              <div class="like-compteur"> <span class="likeCounter">${media.likes}</span><span id="likeTrigger${media.id}"><i class="fas fa-heart"></i></span></div>
+               <div class="like-compteur"> <span class="likeCounter" id="like-counter-${media.id}">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
             </div>
             </div>
-        </div>`;
+        </article>`;
 
-        
-        // Fonction de tri par Select HTML
+
+        // Fonction total like
+        // il faut afficher l'Array avant d'utiliser la fonction
+    
+     
+
+     
+       //console.log("le resultat est " , sum);
+     
+
+
+    
+        // Tri par liste déroulante 
         const selectElement = document.querySelector('select');
         selectElement.addEventListener('change', triDetails)
         let mediaList = [];
 
         function triDetails() {
-            carroussel.innerHTML = "";
             mediaList.push(media);
             console.log(mediaList);
 
             if(this.selectedIndex === 0 ){
-                mediaList.sort();
+                mediaList.push(media.likes);
+                mediaList.sort() 
             }
 
             else if(this.selectedIndex === 1 ){
-                mediaList.sort();
+                mediaList.push(media.date);
+                mediaList.sort() 
+            
             }
 
             else if(this.selectedIndex === 2 ){
-                mediaList.sort();
-                console.log("mediaList est trié ", mediaList)       
+                mediaList.push(media.titre);
+                mediaList.sort() 
+            
             };
         }
-        
+    
 
     
-    // Fonction incrémentation
-    const likeTrigger = document.getElementById('likeTrigger'+media.id);
-    console.log(likeTrigger);
-    let likeTriggerList = [likeTrigger];
+    // Incrémentation des likes par images
+    carroussel.addEventListener('click', incrementationLike); 
+    carroussel.addEventListener('keypress',incrementationLike )
+    function incrementationLike(e) {
+        if (e.target && e.target.id == `like-media-${media.id}`){
+          const likeCounter = document.getElementById(`like-counter-${media.id}`);
+          const likeValue = parseInt(likeCounter.innerHTML);
+          let nbrLikes = likeValue + 1;
+          likeCounter.innerText = nbrLikes;
+        }
 
-    likeTriggerList.forEach(element =>{
-        likeTrigger.addEventListener('click', isLiked)
-        function isLiked() {
-        console.log("J'ai cliqué sur like")
-    }
-    })
-    
-    
-    
-       
-       
-
+      };
 
     };
     
-      
+  
 
-    
 
-      // Gestion du Footer
-      const footer = document.querySelector("footer");
-      footer.innerHTML +=`
+
+
+    // Affichage du Footer
+    const footer = document.querySelector("footer");
+    footer.innerHTML +=`
         <div class="compte-like">
-            <span class="like">297 081 </span><i class="fas fa-heart"></i>
+            <span class="like">1</span><i class="fas fa-heart"></i>
         </div>
         <p>${photographer.price} €/jour</p>`
       
 
-
-
-    /* ------------------------ Gestion du formulaire ----------------------------*/
+    /*------------------------ Gestion du formulaire de contact ----------------------------*/
 
     const contactMe = document.querySelector('.contact');
     const modal = document.querySelector('.fenetre-modale');
@@ -187,6 +195,15 @@ class Photographer {
 
     //fermeture de la modale
     closeBtn.addEventListener('click', closeModal);
+    /*
+    window.addEventListener("keydown", echapIsPressed);
+
+    function echapIsPressed(key) {
+        if(key.keycode =="27"){
+            closeModal;
+        }
+    }
+    */
     function closeModal(){
         modal.style.display ="none";
     }

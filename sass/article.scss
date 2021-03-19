@@ -210,28 +210,20 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                         font-size: x-small;
                     }
                 }
-                
-            
         }
 
-        a{
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            width: 335px;
-            img{
-                width : 175px;
-                height:175px;
-                border-radius: 50%;
-                object-fit: cover;
-                margin-bottom: 0px;
-                box-shadow:0px 6px 20px grey;
-                cursor: pointer;
-                &:hover{
-                    transform: scale(1.10);
-                }
-            }
+        img{
+            width : 175px;
+            height:175px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0px;
+            box-shadow:0px 6px 20px grey;
+            position: absolute;
+            right: 25px;
+            top: 77px;
         }
+        
     }
 
  /*------Bouton contactez moi-----*/
@@ -667,23 +659,23 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             }
         }
 
-        a{
-            img{
-                width: 120px;
-                height: 120px;
-                position: absolute;
-                top: 30px;
-                right: 15px;
+        
+        img{
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 30px;
+            right: 15px;
               
             }
-        }
+        
        
     }
 
     .contact{
         position:sticky; 
         bottom: 3%;
-        left: 30%;
+        left: 25%;
         width: 170px;
         height: 36px;
         button{
@@ -753,24 +745,24 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     
     }
     
+
 /*-------Formulaire------------*/
 .fenetre-modale{
     display: none;
     z-index: 13;
    position: fixed;
     width: 100%;
-
     
     .formulaire{
         height:auto;
-        width:100%;
+        width: 100%;
         background-color: $secondaryColor1;
         display: flex;
         flex-direction: column;
         padding:20px;
         position: absolute;
         top: 0px;
-        right:0px;
+        left: 0px;
         border-radius: 5px;
         box-shadow: 4px 17px 20px 1px black;
         
@@ -779,7 +771,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
            flex-direction: column;
            justify-content: center;
            height: 135px;
-           margin-bottom: 50px;
+           margin-bottom: 10px;
            position: relative;
             h1{
                 font-size: 30px;
@@ -794,39 +786,46 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         }
        #closeBtn{
         position: absolute;
-        top: 60px;
-        right: 20px;
+        top: 50px;
+        right: 80px;
         color: white;
         font-weight: 100;
         font-size: 30px;
         border-radius: none;
         cursor: pointer;
+        img{
+            width: 22px;
+            height: 22px;
+        }
        }
         form{
             display: flex;
             flex-direction: column;
             width: 100%;
-            font-size: 24px;
+            font-size: 22px;
             label{
                 font-weight: lighter;
                 font-size: 24px;
                 display: flex;
                 width: 100%;
                 height: auto;
+                margin-bottom: 2%;
             }
             input{
-                width: 100%;
+                width: 85%;
                 height: 55px;
                 border-radius:5px;
                 border:none;
                 font-size: 24px;
                 padding-left: 10px;
-                margin-left: 5%;
-                margin-right: 5%;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 5%;
+                align-items: center;
             }
             textarea{
-                width: 100%;
-                height: 180px;
+                width: 85%;
+                height: 140px;
                 border-radius:5px;
                 border:none;
                 font-size: 35px;
@@ -846,6 +845,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 border-radius:5px;
                 align-items: center;
                 justify-content: center;
+               
             }
 
             .errorFirstName{
@@ -870,47 +870,45 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     }
 }
 .fenetre-validation-formulaire{
-    height: 200px;
+    height: 100%;
     width:100%;
     position:absolute;
-    top : 50%;
-    right : 18%;
+    top : 0px;
+    left : 0px;
     background-color: $secondaryColor1;
     display: none;
     border-radius: 5px;
     box-shadow: 4px 17px 20px 1px black;
+    z-index: 100000;
 
     .contenu-fenetre-validation-formulaire{
-        height: 200px;
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    height: 200px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 70%;
+        p{
+        font-size: larger;
+        }
+        a{
+        padding: 5px;
+        margin: 5px;
+        height: 45px;
+        background-color: #901C1C;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        font-family: "DM sans";
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
         align-items: center;
-        text-align: center;
-
-            p{
-                font-size: larger;
-            }
-        
-        
-            a{
-            padding: 5px;
-            margin: 5px;
-            height: 45px;
-            background-color: #901C1C;
-            border-radius: 5px;
-            color: white;
-            border: none;
-            font-family: "DM sans";
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            align-items: center;
-            display: flex;
-            }
+        display: flex;
+        }
     }
-    
 }
 
     footer{

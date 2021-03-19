@@ -31,7 +31,16 @@ travelFiltre.addEventListener('click', filtrerPhotographe);
 sportFiltre.addEventListener('click', filtrerPhotographe);
 animalsFiltre.addEventListener('click', filtrerPhotographe);
 eventsFiltre.addEventListener('click', filtrerPhotographe);
- 
+
+nosPhotographes.addEventListener('keypress', showAllPhotographer)
+portraitFiltre.addEventListener('keypress', filtrerPhotographe);
+artFiltre.addEventListener('keypress', filtrerPhotographe);
+fashionFiltre.addEventListener('keypress', filtrerPhotographe);
+architectureFiltre.addEventListener('keypress', filtrerPhotographe);
+travelFiltre.addEventListener('keypress', filtrerPhotographe);
+sportFiltre.addEventListener('keypress', filtrerPhotographe);
+animalsFiltre.addEventListener('keypress', filtrerPhotographe);
+eventsFiltre.addEventListener('keypress', filtrerPhotographe);
 
 function filtrerPhotographe() {
 

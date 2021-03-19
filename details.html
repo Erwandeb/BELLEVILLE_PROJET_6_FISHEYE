@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <a href="index.html"><img src="photos/logo-fisheye.png" alt="logo de fishEye"/></a>
+        <a href="index.html"><img src="photos/logo-fisheye.png" alt="logo de fishEye" tabindex="1"/></a>
     </header>
 
     <main id="mainDivDetail"></main>
@@ -126,7 +126,7 @@
                     <label for="email">Email  </label><div class="erroreMail"></div>
                     <input type="email" id="email" name="email">
 
-                    <label for="message">Message  </label><div class="erroreMessageText"></div>
+                    <label for="message"> Votre message  </label><div class="erroreMessageText"></div>
                     <textarea name="message" id="message"></textarea>
 
                     <button class="soumission" type ="submit">Envoyer</button>
@@ -138,19 +138,18 @@
     <div class="fenetre-validation-formulaire">
         <div class="contenu-fenetre-validation-formulaire">
             <p>Votre message à bien été envoyé ! </p>
-            <a href="mimiKeel.html"> Revenir à l'accueil</a>
+            <a href="index.html"> Revenir à l'accueil</a>
         </div>
     </div>
 
       <!-- footer--> 
       
-    <div class="contact"><button type ="button">Contactez-moi</button></div>
-    
+    <div class="contact"><button type ="button" tabindex="2">Contactez-moi</button></div>
+
     <footer></footer>
 
    <!--<script type="text/javascript" src="javascript/modale.js"></script>--> 
     <script type="text/javascript" src="javascript/ligthbox.js"></script>
-    <script type="text/javascript" src="javascript/incrementation.js"></script>
     <script type="text/javascript" src="json/donnees.json"></script>
     <script type="text/javascript" src="javascript/details.js"></script>
 </body>
