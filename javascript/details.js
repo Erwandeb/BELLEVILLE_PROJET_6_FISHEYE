@@ -19,7 +19,7 @@ class Photographer {
   }
   
   class Media {
-    constructor(id, photographerId, image, video, titre, tags, likes, date, price ){
+    constructor(id, photographerId, image, video, titre, tags, likes, date, price, description ){
         this.id = id;
         this.photographerId = photographerId;
         this.image = image;
@@ -29,6 +29,7 @@ class Photographer {
         this.likes = likes;
         this.date = date;
         this.price = price;
+        this.description = description;
     }
 }
 
@@ -55,14 +56,14 @@ class Photographer {
       mainDivDetail.innerHTML +=`
         <main id="mainDivDetail">
             <div class="presentation">
-                <h2 tabindex="3">${photographer.name}</h2>
-                <h3 tabindex="4">${photographer.city}, ${photographer.country}</h3>
-                <blockquote tabindex="5">${photographer.tagline}</blockquote>
+                <h1 tabindex="2" title="ceci est la page de ${photographer.name}">${photographer.name}</h1>
+                <h3 tabindex="3">${photographer.city}, ${photographer.country}</h3>
+                <blockquote tabindex="4">${photographer.tagline}</blockquote>
       
                 <div id="filtres-articles-${photographer.id}" tabindex="5"></div>
             </div>
 
-        <img src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}" tabindex="6"/>
+        <img src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}" tabindex="7"/>
         </main>`;
 
         const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
@@ -72,7 +73,6 @@ class Photographer {
     
 
     
-
         //Affichage des médias
       const mediaData = data.media.filter((media) => media.photographerId === parseInt(id));
       for (data of mediaData) {
@@ -86,18 +86,19 @@ class Photographer {
             data.likes,
             data.date,
             data.price,
+            data.description,
         )
 
         // Affichage de chaque photos ou videos du photographe
        const carroussel = document.getElementById('carroussel');
        carroussel.innerHTML += `
-        <article class="carroussel-card" tabindex="${media.photographerId}">
-            <img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt=''/>  
+        <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
+            <img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>  
             <div class="description-image">
-            <p>${media.titre}</p>
+            <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
             <div class="prix-like">
-               <p>${media.price} €</p>
-               <div class="like-compteur"> <span class="likeCounter" id="like-counter-${media.id}">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
+               <p tabindex="${media.photographerId}" aria-label=" le prix de cette photo est ${media.price}€"  >${media.price} €</p>
+               <div class="like-compteur" tabindex="${media.photographerId}"> <span class="likeCounter" id="like-counter-${media.id}" aria-label="il à été aimé ${media.likes} fois ">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
             </div>
             </div>
         </article>`;
@@ -288,7 +289,10 @@ class Photographer {
     }
 
     if(  isFirstNameValid && isLastNameValid &&  isEmailValid && isMessageTextValid){
-
+        console.log("le prénom est ",firstName.value);
+        console.log("le nom est ",lastName.value);
+        console.log("le email est ",eMail.value);
+        console.log("le texte saisi est ",messageTexte.value);
         closeModal();
         removeData();
         openFenetreConfirmation()

@@ -20,17 +20,16 @@
 
 <body>
     <header>
-        <a href="index.html"><img src="photos/logo-fisheye.png" alt="logo de fishEye" tabindex="1"/></a>
+        <a href="index.html"><img src="photos/logo-fisheye.png" alt="logo de fishEye" tabindex="1" aria-label="Cliquez pour revenir sur la page d'accueil"/></a>
     </header>
 
-    <main id="mainDivDetail"></main>
-   
-    
+    <main id="mainDivDetail" ></main>
+        
 
     <section>
         <div class="trier">
-            <label>Trier par  : </label>
-            <select>
+            <label for="selection-photographe" >Trier par  : </label>
+            <select tabindex="7" id="selection-photographe" aria-label="cliquez pour ouvrir la liste déroulante">
                 <option value="popularite">Popularité</option>
                 <option value="date">Date</option>
                 <option value="titre">Titre</option>
@@ -114,22 +113,22 @@
             <div class="formulaire">
                 <div id="formIntroduction"></div>
 
-                <div id="closeBtn"><img  src="photos/svg/cross white.svg" alt=" Croix pour fermer la modale"/></div>
+                <div id="closeBtn"><img  src="photos/svg/cross white.svg" alt="fermer le formulaire "/></div>
                 <form id ="form" action="#">
-
+                    
                     <label for="firstname">Prénom </label><div class="errorFirstName"></div>
-                    <input type="text" id="firstname" name="firstname">
+                    <input type="text" id="firstname" name="firstname" aria-label="Ecrivez votre prénom">
                     
                     <label for="lastname">Nom  </label><div class="errorlastName"></div>
-                    <input type="text" id="lastname" name="lastname">
+                    <input type="text" id="lastname" name="lastname" aria-label="Ecrivez votre nom">
                     
                     <label for="email">Email  </label><div class="erroreMail"></div>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" aria-label="Ecrivez votre e-mail">
 
                     <label for="message"> Votre message  </label><div class="erroreMessageText"></div>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="message" id="message" aria-label="Ecrivez votre message"></textarea>
 
-                    <button class="soumission" type ="submit">Envoyer</button>
+                    <button class="soumission" type ="submit" aria-label="cliquez ici pour envoyer votre formulaire">Envoyer</button>
 
                 </form>
         </div>
@@ -144,9 +143,9 @@
 
       <!-- footer--> 
       
-    <div class="contact"><button type ="button" tabindex="2">Contactez-moi</button></div>
+    <div class="contact"><button type ="button" tabindex="6">Contactez-moi</button></div>
 
-    <footer></footer>
+    <footer></footer>       
 
    <!--<script type="text/javascript" src="javascript/modale.js"></script>--> 
     <script type="text/javascript" src="javascript/ligthbox.js"></script>

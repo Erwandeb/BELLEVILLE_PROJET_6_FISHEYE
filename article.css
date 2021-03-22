@@ -82,7 +82,7 @@ main .presentation {
   align-items: flex-start;
   padding-left: 50px;
 }
-main .presentation h2 {
+main .presentation h1 {
   margin: 0px;
   font-weight: lighter;
   font-size: 45px;
@@ -271,13 +271,7 @@ section .trier select {
   border-radius: 5px;
   height: 50px;
   padding-left: 5px;
-  border: 1px solid white;
-}
-section .trier option {
-  height: 50px;
-  padding-left: 5px;
-  border: white;
-  border: 1px solid white;
+  border-bottom: 1px solid white;
 }
 section #carroussel {
   display: grid;
@@ -436,29 +430,33 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
   position: relative;
 }
 .fenetre-modale .formulaire #formIntroduction h1 {
-  font-size: 62px;
+  font-size: 58px;
   font-weight: 500;
   margin: 0px;
 }
 .fenetre-modale .formulaire #formIntroduction h2 {
-  font-size: 62px;
+  font-size: 58px;
   font-weight: 500;
   margin: 0px;
 }
 .fenetre-modale .formulaire #closeBtn {
   position: absolute;
-  top: -5px;
-  right: 67px;
+  top: 5px;
+  right: 28px;
   color: white;
   font-weight: 100;
   font-size: 66px;
   border-radius: none;
   cursor: pointer;
 }
+.fenetre-modale .formulaire #closeBtn img {
+  width: 35px;
+  height: 35px;
+}
 .fenetre-modale .formulaire form {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 660px;
   font-size: 32px;
 }
 .fenetre-modale .formulaire form label {
@@ -467,7 +465,7 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
   display: flex;
 }
 .fenetre-modale .formulaire form input {
-  width: 600px;
+  width: 660px;
   height: 70px;
   border-radius: 5px;
   border: none;
@@ -475,7 +473,7 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
   padding-left: 10px;
 }
 .fenetre-modale .formulaire form textarea {
-  width: 600px;
+  width: 660px;
   height: 140px;
   border-radius: 5px;
   border: none;

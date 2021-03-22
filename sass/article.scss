@@ -88,7 +88,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             text-align: center;
             align-items: flex-start;
             padding-left: 50px;
-             h2{
+             h1 {
                  margin:0px;
                  font-weight: lighter;
                  font-size: 45px;
@@ -289,13 +289,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 border-radius: 5px;
                 height: 50px;
                 padding-left: 5px;
-                border: 1px solid white
-            }
-            option{
-                height: 50px;
-                padding-left: 5px;
-                border: white;
-                border: 1px solid white;
+                border-bottom: 1px solid white;
             }
         }
 
@@ -466,30 +460,34 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
            margin-bottom: 50px;
            position: relative;
             h1{
-                font-size: 62px;
+                font-size: 58px;
                 font-weight : 500;
                 margin:0px;
             }
             h2{
-                font-size: 62px;
+                font-size: 58px;
                 font-weight : 500;
                 margin:0px;
             }
         }
        #closeBtn{
         position: absolute;
-        top: -5px;
-        right: 67px;
+        top: 5px;
+        right: 28px;
         color: white;
         font-weight: 100;
         font-size: 66px;
         border-radius: none;
         cursor: pointer;
+        img{
+            width: 35px;
+            height: 35px;
+        }
        }
         form{
             display: flex;
             flex-direction: column;
-            width: 600px;
+            width: 660px;
             font-size: 32px;
 
             label{
@@ -498,7 +496,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 display: flex;
             }
             input{
-                width: 600px;
+                width: 660px;
                 height: 70px;
                 border-radius:5px;
                 border:none;
@@ -506,7 +504,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 padding-left: 10px;
             }
             textarea{
-                width: 600px;
+                width: 660px;
                 height: 140px;
                 border-radius:5px;
                 border:none;

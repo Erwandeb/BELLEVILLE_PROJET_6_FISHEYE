@@ -28,8 +28,7 @@ fetch('javascript/data.json')
         // Affichage écran acceuil
         mainDiv.innerHTML += `
         <article>
-                <a href="details.html?id=${photographer.id}"><img id="photoProfil-${photographer.id}" onclick= "console.log(this)" src="photos/Photographers-ID-Photos/${photographer.portrait}"
-                        alt="${photographer.description}"/></a>
+                <a href="details.html?id=${photographer.id}" aria-label="cliquez pour afficher le profil de ${photographer.name}"><img id="photoProfil-${photographer.id}" onclick= "console.log(this)" src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}"/></a>
                 <div class="description-article">
                     <h2>${photographer.name}</h2>
                     <h3>${photographer.city}, ${photographer.country}</h3>
