@@ -146,7 +146,6 @@ class Photographer {
     
     // Incrémentation des likes par images
     carroussel.addEventListener('click', incrementationLike); 
-    carroussel.addEventListener('keypress',incrementationLike )
     function incrementationLike(e) {
         if (e.target && e.target.id == `like-media-${media.id}`){
           const likeCounter = document.getElementById(`like-counter-${media.id}`);
@@ -154,9 +153,7 @@ class Photographer {
           let nbrLikes = likeValue + 1;
           likeCounter.innerText = nbrLikes;
         }
-
       };
-
     };
     
   
@@ -196,15 +193,13 @@ class Photographer {
 
     //fermeture de la modale
     closeBtn.addEventListener('click', closeModal);
-    /*
-    window.addEventListener("keydown", echapIsPressed);
-
-    function echapIsPressed(key) {
-        if(key.keycode =="27"){
-            closeModal;
+    window.addEventListener("keydown", (event) =>{
+        if(event.key === 'Escape'){
+            closeModal();
         }
-    }
-    */
+    });
+
+ 
     function closeModal(){
         modal.style.display ="none";
     }
