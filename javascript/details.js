@@ -133,29 +133,41 @@ let photographers;
     }
 
     // Tri par liste déroulante 
-      const selectElement = document.querySelector('select');
-      selectElement.addEventListener('change', triDetails)
-      let mediaList = [];
+    const selectElement = document.querySelector('select');
+    selectElement.addEventListener('change', triDetails)
 
-      function triDetails() {
-    
-          console.log(photographers.media.length);
+    function triDetails(){
+        console.log(photographers.media.length);
+        console.log("bonjour" , photographers.media.photographerId);
 
-          if(this.selectedIndex === 0 ){
-              //console.log(mediaList);
-             const newData = photographers.media.sort((a, b) => (a.likes < b.likes) ? 1 : -1);
-              console.log(newData)
-              //mediaList.push(media.likes);
-              //mediaList.sort();
-          }
+        if(this.selectedIndex === 0){
+            const newData = photographers.media.sort((a, b) => (a.likes < b.likes) ? 1 : -1);
+            console.log(newData)
+        }
 
-          else if(this.selectedIndex === 1 ){
-          }
+        else if(this.selectedIndex === 1){
+            //const carroussel = document.getElementById('carroussel');
+            // carroussel.innerHTML = "";
+           
+            const newData = photographers.media.sort((a, b) => (a.date < b.date) ? 1 : -1);
+            const test = data.media.filter((media) => media.photographerId === parseInt(id));
+            console.log(test)
 
-          else if(this.selectedIndex === 2 ){
-          };
-      }
+           // newData.forEach((element)=>{
+            //    return element === id;
+           // });
+           // console.log(newData)
+           // ca
+           // console.log(newData);
+           // console.log(id);
+            
+        }
 
+        else if(this.selectedIndex === 2){
+            const newData = photographers.media.sort((a, b) => (a.titre > b.titre) ? 1 : -1);
+            console.log(newData);
+        };
+    }
 
     // Affichage du Footer
     const footer = document.querySelector("footer");
