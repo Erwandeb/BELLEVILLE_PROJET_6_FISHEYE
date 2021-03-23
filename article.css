@@ -620,24 +620,121 @@ footer .fa-heart {
     margin-top: 2px;
     margin-bottom: 5px;
   }
+  main .presentation #filtres-articles-243 {
+    height: 10px;
+  }
+  main .presentation #filtres-articles-243 span {
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    background-color: white;
+    color: #901C1C;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  main .presentation #filtres-articles-930 {
+    height: 10px;
+  }
+  main .presentation #filtres-articles-930 span {
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    background-color: white;
+    color: #901C1C;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  main .presentation #filtres-articles-82 {
+    height: 10px;
+  }
+  main .presentation #filtres-articles-82 span {
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    background-color: white;
+    color: #901C1C;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  main .presentation #filtres-articles-527 {
+    height: 10px;
+  }
+  main .presentation #filtres-articles-527 span {
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    background-color: white;
+    color: #901C1C;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  main .presentation #filtres-articles-925 {
+    height: 10px;
+  }
+  main .presentation #filtres-articles-925 span {
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    background-color: white;
+    color: #901C1C;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  main .presentation #filtres-articles-195 {
+    height: 10px;
+  }
+  main .presentation #filtres-articles-195 span {
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    background-color: white;
+    color: #901C1C;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  main .presentation #filtres-articles-243 {
+    height: 10px;
+  }
+  main .presentation #filtres-articles-243 span {
+    border-radius: 20px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    background-color: white;
+    color: #901C1C;
+    border: 1px solid grey;
+    font-weight: bold;
+    font-size: 11px;
+  }
   main img {
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 65px;
+    top: 60px;
     right: 18px;
   }
 
   .contact {
     position: sticky;
     bottom: 3%;
-    left: 25%;
+    left: 27%;
     width: 170px;
     height: 36px;
+    display: flex;
+    justify-content: center;
   }
   .contact button {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 170px;
     height: 36px;
+    margin-bottom: 5%;
+    padding: 5px 10px 5px 10px;
   }
 
   /*--- Description image du carroussel ----*/
@@ -681,13 +778,14 @@ footer .fa-heart {
     justify-content: space-between;
     align-items: center;
     margin-left: 5px;
-    width: 90px;
+    width: 95px;
   }
   section #carroussel .carroussel-card .prix-like p {
     margin: 0px;
+    width: 55px;
   }
   section #carroussel .carroussel-card .prix-like .like-compteur {
-    width: 50px;
+    width: 60px;
     display: flex;
     justify-content: flex-end;
   }
@@ -760,18 +858,18 @@ footer .fa-heart {
     display: flex;
     width: 100%;
     height: auto;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
   }
   .fenetre-modale .formulaire form input {
     width: 85%;
-    height: 55px;
+    height: 45px;
     border-radius: 5px;
     border: none;
     font-size: 24px;
     padding-left: 10px;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     align-items: center;
   }
   .fenetre-modale .formulaire form textarea {
@@ -790,26 +888,29 @@ footer .fa-heart {
     font-family: "DM sans";
     font-size: 22px;
     margin-top: 30px;
-    margin-right: 50%;
+    margin-left: 20%;
     border: none;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
+    display: flex;
+    position: relative;
+    right: 0;
   }
   .fenetre-modale .formulaire form .errorFirstName {
-    font-size: large;
+    font-size: 14px;
     color: whitesmoke;
   }
   .fenetre-modale .formulaire form .errorlastName {
-    font-size: medium;
+    font-size: 14px;
     color: whitesmoke;
   }
   .fenetre-modale .formulaire form .erroreMail {
-    font-size: medium;
+    font-size: 14px;
     color: whitesmoke;
   }
   .fenetre-modale .formulaire form .erroreMessageText {
-    font-size: medium;
+    font-size: 14px;
     color: whitesmoke;
   }
 

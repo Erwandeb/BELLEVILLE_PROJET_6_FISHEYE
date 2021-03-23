@@ -176,7 +176,7 @@ class Photographer {
     const modal = document.querySelector('.fenetre-modale');
     const closeBtn = document.getElementById('closeBtn');
     const formIntroduction = document.getElementById('formIntroduction');
-    
+
     console.log(contactMe);
     formIntroduction.innerHTML +=`
         <div>

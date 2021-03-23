@@ -667,12 +667,113 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 margin-top: 2px;
                 margin-bottom: 5px;
             }
+
+            #filtres-articles-243{
+                height: 10px;
+                span{
+                    border-radius: 20px;
+                    padding : 2px 5px 2px 5px;
+                    margin: 2px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
+    
+            #filtres-articles-930{
+                height: 10px;
+                span{
+                    border-radius: 20px;
+                    padding : 2px 5px 2px 5px;
+                    margin: 2px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
+    
+            #filtres-articles-82{
+                height: 10px;
+                span{
+                    border-radius: 20px;
+                    padding : 2px 5px 2px 5px;
+                    margin: 2px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
+    
+            #filtres-articles-527{
+                height: 10px;
+                span{
+                    border-radius: 20px;
+                    padding : 2px 5px 2px 5px;
+                    margin: 2px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
+    
+            #filtres-articles-925{
+                height: 10px;
+                span{
+                    border-radius: 20px;
+                    padding : 2px 5px 2px 5px;
+                    margin: 2px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
+    
+            #filtres-articles-195{
+                height: 10px;
+                span{
+                    border-radius: 20px;
+                    padding : 2px 5px 2px 5px;
+                    margin: 2px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
+    
+            #filtres-articles-243{
+                height: 10px;
+                span{
+                    border-radius: 20px;
+                    padding : 2px 5px 2px 5px;
+                    margin: 2px;
+                    background-color: white;
+                    color: $primaryColor1;
+                    border: 1px solid grey;
+                    font-weight: bold;
+                    font-size: 11px;
+                }
+            }
         }
+
+        
+
         img{
             width: 100px;
             height: 100px;
             position: absolute;
-            top: 65px;
+            top: 60px;
             right: 18px;
         } 
     }
@@ -680,12 +781,18 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     .contact{
         position:sticky; 
         bottom: 3%;
-        left: 25%;
+        left: 27%;
         width: 170px;
         height: 36px;
+        display: flex;
+        justify-content: center;
         button{
-            width: 100%;
+            display: flex;
+            justify-content: center;
+            width: 170px;
             height: 36px;
+            margin-bottom: 5%;
+            padding : 5px 10px 5px 10px;
         }
     }
 
@@ -730,12 +837,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     justify-content: space-between;
                     align-items: center;
                     margin-left: 5px;
-                    width: 90px;
+                    width: 95px;
                     p{
                         margin:0px;
+                        width: 55px;
                     }
                     .like-compteur{
-                        width: 50px;
+                        width: 60px;
                         display: flex;
                         justify-content: flex-end;
                         .fa-heart{
@@ -814,18 +922,18 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 display: flex;
                 width: 100%;
                 height: auto;
-                margin-bottom: 2%;
+                margin-bottom: 1%;
             }
             input{
                 width: 85%;
-                height: 55px;
+                height: 45px;
                 border-radius:5px;
                 border:none;
                 font-size: 24px;
                 padding-left: 10px;
                 margin-left: 0;
                 margin-right: 0;
-                margin-bottom: 5%;
+                margin-bottom: 1%;
                 align-items: center;
             }
             textarea{
@@ -845,29 +953,31 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 font-family: "DM sans";
                 font-size: 22px;
                 margin-top:30px;
-                margin-right: 50%;
+                margin-left: 20%;
                 border:none;
                 border-radius:5px;
                 align-items: center;
                 justify-content: center;
-               
+                display: flex;
+                position: relative;
+               right: 0;
             }
 
             .errorFirstName{
-                font-size: large;
+                font-size: 14px;
                 color : whitesmoke;
             }
             .errorlastName{
-                font-size: medium;
+                font-size: 14px;
                 color : whitesmoke;
             }
             .erroreMail{
-                font-size: medium;
+                font-size: 14px;
                 color : whitesmoke;
 
             }
             .erroreMessageText{
-                font-size: medium;
+                font-size: 14px;
                 color : whitesmoke;
 
             }
