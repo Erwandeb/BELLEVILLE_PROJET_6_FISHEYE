@@ -165,9 +165,9 @@ class Photographer {
     const footer = document.querySelector("footer");
     footer.innerHTML +=`
         <div class="compte-like">
-            <span class="like">1</span><i class="fas fa-heart"></i>
+            <span class="like" tabindex="${photographer.id} aria-label="Ce photographe a été aimé ${photographer.price} fois">1</span><i class="fas fa-heart"></i>
         </div>
-        <p>${photographer.price} €/jour</p>`
+        <p tabindex="${photographer.id}" aria-label="Le prix de ce photographe est ${photographer.price}€">${photographer.price} €/jour</p>`
       
 
     /*------------------------ Gestion du formulaire de contact ----------------------------*/

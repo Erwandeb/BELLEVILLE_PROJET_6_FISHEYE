@@ -94,8 +94,8 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                  font-size: 45px;
                  color: $primaryColor2;
                  letter-spacing: 1px;
-                 width:300px;
-                 height: 118px;
+                 width:100%;
+                 height: auto;
                  display: flex;
                  text-align: start;
              }
@@ -117,13 +117,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     height: 10px;
                     span{
                         border-radius: 20px;
-                        padding:5px;
+                        padding : 3px 5px 3px 5px;
                         margin: 2px;
                         background-color: white;
                         color: $primaryColor1;
                         border: 1px solid grey;
                         font-weight: bold;
-                        font-size: x-small;
+                        font-size: 13px;
                     }
                 }
     
@@ -131,13 +131,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     height: 10px;
                     span{
                         border-radius: 20px;
-                        padding:5px;
+                        padding : 3px 5px 3px 5px;
                         margin: 2px;
                         background-color: white;
                         color: $primaryColor1;
                         border: 1px solid grey;
                         font-weight: bold;
-                        font-size: x-small;
+                        font-size: 13px;
                     }
                 }
     
@@ -145,13 +145,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     height: 10px;
                     span{
                         border-radius: 20px;
-                        padding:5px;
+                        padding : 3px 5px 3px 5px;
                         margin: 2px;
                         background-color: white;
                         color: $primaryColor1;
                         border: 1px solid grey;
                         font-weight: bold;
-                        font-size: x-small;
+                        font-size: 13px;
                     }
                 }
     
@@ -159,13 +159,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     height: 10px;
                     span{
                         border-radius: 20px;
-                        padding:5px;
+                        padding : 3px 5px 3px 5px;
                         margin: 2px;
                         background-color: white;
                         color: $primaryColor1;
                         border: 1px solid grey;
                         font-weight: bold;
-                        font-size: x-small;
+                        font-size: 13px;
                     }
                 }
     
@@ -173,13 +173,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     height: 10px;
                     span{
                         border-radius: 20px;
-                        padding:5px;
+                        padding : 3px 5px 3px 5px;
                         margin: 2px;
                         background-color: white;
                         color: $primaryColor1;
                         border: 1px solid grey;
                         font-weight: bold;
-                        font-size: x-small;
+                        font-size: 13px;
                     }
                 }
     
@@ -187,13 +187,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     height: 10px;
                     span{
                         border-radius: 20px;
-                        padding:5px;
+                        padding : 3px 5px 3px 5px;
                         margin: 2px;
                         background-color: white;
                         color: $primaryColor1;
                         border: 1px solid grey;
                         font-weight: bold;
-                        font-size: x-small;
+                        font-size: 13px;
                     }
                 }
     
@@ -201,13 +201,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     height: 10px;
                     span{
                         border-radius: 20px;
-                        padding:5px;
+                        padding : 3px 5px 3px 5px;
                         margin: 2px;
                         background-color: white;
                         color: $primaryColor1;
                         border: 1px solid grey;
                         font-weight: bold;
-                        font-size: x-small;
+                        font-size: 13px;
                     }
                 }
         }
@@ -230,11 +230,11 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
 
     .contact{
         position: absolute;
-        top:230px;
+        top:240px;
         left : 355px;
         cursor: pointer;
         button{
-            padding:5px;
+            padding:28px 10px 28px 10px;
             margin : 5px;
             height:45px;
             background-color: $primaryColor1;
@@ -243,7 +243,11 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             border:none;
             font-family: "DM sans";
             font-size: 16px;
+            font-weight: 500;
             cursor: pointer;
+            display: flex;
+            text-align: center;
+            align-items: center;
             &:hover{
                 background-color: $primaryColor2;
                 color:black;
@@ -647,27 +651,30 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             width: 240px;
             padding-left:4%;
             height: 240px;
-            h2{
-                font-size: xx-large;
+            h1{
+                font-size: 32px;
                 height: auto;
-                width: 65%;
+                width: 100%;
             }
             h3{
-                font-size: large;
+                font-size: 16px;
+                font-weight: 500;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+            blockquote{
+                font-size: 13px;
+                margin-top: 2px;
+                margin-bottom: 5px;
             }
         }
-
-        
         img{
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             position: absolute;
-            top: 30px;
-            right: 15px;
-              
-            }
-        
-       
+            top: 65px;
+            right: 18px;
+        } 
     }
 
     .contact{
