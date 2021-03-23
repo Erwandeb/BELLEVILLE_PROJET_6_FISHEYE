@@ -1,7 +1,7 @@
 // Récupération de l'URL
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
-
+let totalLike = 0;
 
 // Déclaration des classes 
 class Photographer {
@@ -33,10 +33,13 @@ class Photographer {
     }
 }
 
+let photographers;
+
 // Récupération des données 
   fetch('javascript/data.json')
     .then((response) => response.json())
     .then(function (data) {
+        photographers = data;
       const photographerData = data.photographers.filter((photographer) => photographer.id === parseInt(id));
       const photographer = new Photographer(
         photographerData[0].id,
@@ -88,12 +91,17 @@ class Photographer {
             data.price,
             data.description,
         )
+    
+        totalLike += media.likes;
 
         // Affichage de chaque photos ou videos du photographe
        const carroussel = document.getElementById('carroussel');
+       const imageTag = `<img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`
+       const videoTag = `<video controls class='carroussel-img' src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`
+
        carroussel.innerHTML += `
         <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
-            <img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>  
+            ${media.video == undefined ? imageTag : videoTag} 
             <div class="description-image">
             <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
             <div class="prix-like">
@@ -102,46 +110,6 @@ class Photographer {
             </div>
             </div>
         </article>`;
-
-
-        // Fonction total like
-        // il faut afficher l'Array avant d'utiliser la fonction
-    
-     
-
-     
-       //console.log("le resultat est " , sum);
-     
-
-
-    
-        // Tri par liste déroulante 
-        const selectElement = document.querySelector('select');
-        selectElement.addEventListener('change', triDetails)
-        let mediaList = [];
-
-        function triDetails() {
-            mediaList.push(media);
-            console.log(mediaList);
-
-            if(this.selectedIndex === 0 ){
-                mediaList.push(media.likes);
-                mediaList.sort() 
-            }
-
-            else if(this.selectedIndex === 1 ){
-                mediaList.push(media.date);
-                mediaList.sort() 
-            
-            }
-
-            else if(this.selectedIndex === 2 ){
-                mediaList.push(media.titre);
-                mediaList.sort() 
-            
-            };
-        }
-    
 
     
     // Incrémentation des likes par images
@@ -152,23 +120,53 @@ class Photographer {
           const likeValue = parseInt(likeCounter.innerHTML);
           let nbrLikes = likeValue + 1;
           likeCounter.innerText = nbrLikes;
+         showNewTotalLikes();
         }
       };
     };
     
-  
 
+    function showNewTotalLikes(){
+        totalLike++;
+        const nbrTotalLikes = document.getElementById('nbrTotalLikes');
+        nbrTotalLikes.innerText = totalLike;
+    }
 
+    // Tri par liste déroulante 
+      const selectElement = document.querySelector('select');
+      selectElement.addEventListener('change', triDetails)
+      let mediaList = [];
+
+      function triDetails() {
+    
+          console.log(photographers.media.length);
+
+          if(this.selectedIndex === 0 ){
+              //console.log(mediaList);
+             const newData = photographers.media.sort((a, b) => (a.likes < b.likes) ? 1 : -1);
+              console.log(newData)
+              //mediaList.push(media.likes);
+              //mediaList.sort();
+          }
+
+          else if(this.selectedIndex === 1 ){
+          }
+
+          else if(this.selectedIndex === 2 ){
+          };
+      }
 
 
     // Affichage du Footer
     const footer = document.querySelector("footer");
     footer.innerHTML +=`
         <div class="compte-like">
-            <span class="like" tabindex="${photographer.id} aria-label="Ce photographe a été aimé ${photographer.price} fois">1</span><i class="fas fa-heart"></i>
+            <span class="like" id="nbrTotalLikes" tabindex="${photographer.id} aria-label="Ce photographe a été aimé ${photographer.price} fois">${totalLike}</span> <i class="fas fa-heart"></i>
         </div>
         <p tabindex="${photographer.id}" aria-label="Le prix de ce photographe est ${photographer.price}€">${photographer.price} €/jour</p>`
       
+
+
 
     /*------------------------ Gestion du formulaire de contact ----------------------------*/
 

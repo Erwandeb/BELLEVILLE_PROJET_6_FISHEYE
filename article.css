@@ -295,6 +295,13 @@ section #carroussel .carroussel-card img {
   object-fit: cover;
   cursor: pointer;
 }
+section #carroussel .carroussel-card video {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+}
 section #carroussel .carroussel-card .description-image {
   width: 250px;
   display: flex;
@@ -754,6 +761,13 @@ footer .fa-heart {
     width: 100%;
   }
   section #carroussel .carroussel-card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  section #carroussel .carroussel-card video {
     width: 100%;
     height: 250px;
     border-radius: 5px;
