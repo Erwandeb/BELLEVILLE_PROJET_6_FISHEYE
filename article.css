@@ -71,6 +71,7 @@ main {
   justify-content: space-between;
   background-color: #FAFAFA;
   position: relative;
+  margin-bottom: 25px;
 }
 main .presentation {
   width: 310px;
@@ -355,6 +356,7 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
   top: 120px;
   right: 50px;
   z-index: 200000;
+  cursor: pointer;
 }
 #lightBox #closeBtnLightBox img {
   width: 35px;
@@ -365,6 +367,7 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
   top: 450px;
   right: 50px;
   z-index: 200000;
+  cursor: pointer;
 }
 #lightBox #suivantLightBox img {
   width: 35px;
@@ -375,6 +378,7 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
   top: 450px;
   left: 50px;
   z-index: 200000;
+  cursor: pointer;
 }
 #lightBox #precedentLightBox img {
   width: 35px;
@@ -957,6 +961,69 @@ footer .fa-heart {
     text-decoration: none;
     align-items: center;
     display: flex;
+  }
+
+  #lightBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0px;
+    left: 0;
+    background-color: white;
+    z-index: 400000;
+  }
+  #lightBox #closeBtnLightBox {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    z-index: 200000;
+  }
+  #lightBox #closeBtnLightBox img {
+    width: 20px;
+    height: 20px;
+  }
+  #lightBox #suivantLightBox {
+    position: absolute;
+    top: 450px;
+    right: 50px;
+    z-index: 200000;
+  }
+  #lightBox #suivantLightBox img {
+    width: 20px;
+    height: 20px;
+  }
+  #lightBox #precedentLightBox {
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    z-index: 200000;
+  }
+  #lightBox #precedentLightBox img {
+    width: 20px;
+    height: 20px;
+  }
+  #lightBox #photoSlider {
+    width: 100%;
+    height: 100%;
+  }
+  #lightBox #photoSlider img {
+    width: 200px;
+    height: 200px;
+    margin-left: 28%;
+    object-fit: cover;
+    margin-top: 50%;
+    border-radius: 5px;
+    box-shadow: 0px 6px 20px grey;
+    position: relative;
+  }
+  #lightBox #photoSlider p {
+    margin-top: 0px;
+    margin-left: 28%;
+    font-size: large;
+    color: #901C1C;
+    font-weight: 500;
+    width: 200px;
   }
 
   footer {

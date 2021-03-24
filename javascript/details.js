@@ -113,15 +113,17 @@ let photographers;
 
 /*------------------------------------- Gestion de la LightBox ------------------------------------------------------------------*/
    
-        carroussel.addEventListener('click', throwLightBox); 
+        
         const lightBox = document.getElementById('lightBox');
-        //const photoSlider = getElementById('photoSlider');
+        const suivantLightBox = document.getElementById('suivantLightBox');
+        const precedentLightBox = document.getElementById('precedentLightBox');
+        const closeBtnLightBox = document.getElementById("closeBtnLightBox"); 
 
+        carroussel.addEventListener('click', throwLightBox); 
         function throwLightBox(e){
             if (e.target && e.target.id == `carroussel-img-${media.id}`){
                 console.log("hello", media.image);
                 lightBox.style.display = "block";
-
                 photoSlider.innerHTML += `
                 <div id="photo-Slider-${media.id}">
                 ${media.video == undefined ? imageTag : videoTag} 
@@ -131,11 +133,18 @@ let photographers;
             }
         };
 
+        suivantLightBox.addEventListener("click", envoyerPhotoSuivante);
+        function envoyerPhotoSuivante() {
+            const photoSlider = getElementById("photo-Slider-"+media.id);
+            console.log(photoSlider)
+            photoSlider.innerHTML="";
+            console.log("bonjour");
+            
+        }
        
 
 
-        // Fermeture de la lightBox
-        const closeBtnLightBox = document.getElementById("closeBtnLightBox"); 
+        
         closeBtnLightBox.addEventListener('click', closeBox);
         window.addEventListener("keydown", (event) =>{
             if(event.key === 'Escape'){
