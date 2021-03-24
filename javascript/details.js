@@ -125,49 +125,124 @@ let photographers;
       };
     };
     
-
     function showNewTotalLikes(){
         totalLike++;
         const nbrTotalLikes = document.getElementById('nbrTotalLikes');
         nbrTotalLikes.innerText = totalLike;
     }
 
+
     // Tri par liste déroulante 
     const selectElement = document.querySelector('select');
-    selectElement.addEventListener('change', triDetails)
+    selectElement.addEventListener('change', triDetails);
 
     function triDetails(){
-        console.log(photographers.media.length);
-        console.log("bonjour" , photographers.media.photographerId);
+       const carroussel = document.getElementById('carroussel');
+        carroussel.innerHTML = "";
+        console.log("test1", mediaData)
 
         if(this.selectedIndex === 0){
-            const newData = photographers.media.sort((a, b) => (a.likes < b.likes) ? 1 : -1);
-            console.log(newData)
+            const mediaListTri = mediaData.sort((a, b) => (a.likes < b.likes) ? 1 : -1);
+            for (data of mediaListTri) {
+                const media = new Media(
+                    data.id,
+                    data.photographerId,
+                    data.image,
+                    data.video,
+                    data.titre,
+                    data.tags,
+                    data.likes,
+                    data.date,
+                    data.price,
+                    data.description,
+                )
+                const imageTag = `<img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`
+                const videoTag = `<video controls class='carroussel-img' src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`
+                carroussel.innerHTML += `
+                <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
+                    ${media.video == undefined ? imageTag : videoTag} 
+                    <div class="description-image">
+                    <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
+                    <div class="prix-like">
+                    <p tabindex="${media.photographerId}" aria-label=" le prix de cette photo est ${media.price}€"  >${media.price} €</p>
+                    <div class="like-compteur" tabindex="${media.photographerId}"> <span class="likeCounter" id="like-counter-${media.id}" aria-label="il à été aimé ${media.likes} fois ">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
+                    </div>
+                    </div>
+                </article>`;
+            }
         }
 
         else if(this.selectedIndex === 1){
-            //const carroussel = document.getElementById('carroussel');
-            // carroussel.innerHTML = "";
-           
-            const newData = photographers.media.sort((a, b) => (a.date < b.date) ? 1 : -1);
-            const test = data.media.filter((media) => media.photographerId === parseInt(id));
-            console.log(test)
+            const mediaListTri = mediaData.sort((a, b) => (a.date > b.date) ? 1 : -1);
+            console.log(mediaListTri)
 
-           // newData.forEach((element)=>{
-            //    return element === id;
-           // });
-           // console.log(newData)
-           // ca
-           // console.log(newData);
-           // console.log(id);
+            for (data of mediaListTri) {
+                const media = new Media(
+                    data.id,
+                    data.photographerId,
+                    data.image,
+                    data.video,
+                    data.titre,
+                    data.tags,
+                    data.likes,
+                    data.date,
+                    data.price,
+                    data.description,
+                )
+                const imageTag = `<img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`
+                const videoTag = `<video controls class='carroussel-img' src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`
+                carroussel.innerHTML += `
+                <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
+                    ${media.video == undefined ? imageTag : videoTag} 
+                    <div class="description-image">
+                    <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
+                    <div class="prix-like">
+                    <p tabindex="${media.photographerId}" aria-label=" le prix de cette photo est ${media.price}€"  >${media.price} €</p>
+                    <div class="like-compteur" tabindex="${media.photographerId}"> <span class="likeCounter" id="like-counter-${media.id}" aria-label="il à été aimé ${media.likes} fois ">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
+                    </div>
+                    </div>
+                </article>`;
+            }
+        
             
         }
 
         else if(this.selectedIndex === 2){
-            const newData = photographers.media.sort((a, b) => (a.titre > b.titre) ? 1 : -1);
-            console.log(newData);
+            const mediaListTri = mediaData.sort((a, b) => (a.titre > b.titre) ? 1 : -1);
+            for (data of mediaListTri) {
+                const media = new Media(
+                    data.id,
+                    data.photographerId,
+                    data.image,
+                    data.video,
+                    data.titre,
+                    data.tags,
+                    data.likes,
+                    data.date,
+                    data.price,
+                    data.description,
+                )
+                const imageTag = `<img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`
+                const videoTag = `<video controls class='carroussel-img' src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`
+                carroussel.innerHTML += `
+                <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
+                    ${media.video == undefined ? imageTag : videoTag} 
+                    <div class="description-image">
+                    <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
+                    <div class="prix-like">
+                    <p tabindex="${media.photographerId}" aria-label=" le prix de cette photo est ${media.price}€"  >${media.price} €</p>
+                    <div class="like-compteur" tabindex="${media.photographerId}"> <span class="likeCounter" id="like-counter-${media.id}" aria-label="il à été aimé ${media.likes} fois ">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
+                    </div>
+                    </div>
+                </article>`;
+            }
+        
         };
     }
+
+    //lightbox 
+
+
 
     // Affichage du Footer
     const footer = document.querySelector("footer");
