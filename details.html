@@ -38,80 +38,13 @@
         <div id="carroussel"></div>    
     </section>
 
-    <!--lightbox--> 
-    <div class="lightbox">
-        <div class="closeLightbox"><img  src="photos/svg/cross.svg" alt=" Croix pour fermer la lightbox"/></div>
-        <div class="suivantLightBox"><img  src="photos/svg/chevron-droit.svg" alt=" Chevron vers la droite pour circuler dans la lightbox"/></i></div>
-        <div class="precedentLightBox"><img  src="photos/svg/chevron-gauche.svg" alt=" Chevron vers la gauche pour circuler dans la lightbox"/></i></div>
-    
-        <div class="window-slider">
-            <div class="slider">
-                
-                <figure class="lightBox-img" id = "lastClone">
-                    <img  src="photos/Mimi/Portrait_Wednesday.jpg" alt=" Une enfant qui se tient accroupie pour reflechir"/>
-                    <div class="description-image">
-                        <figcaption>Arc-en-ciel</figcaption>
-                    </div>
-                </figure> 
-
-                <figure class="lightBox-img">
-                    <img  src="photos/Mimi/Animals_Rainbow.jpg" alt=" Un martin pecheur sur une branche"/>
-                    <div class="description-image">
-                        <figcaption>Arc-en-ciel</figcaption>
-                    </div>
-                </figure>
-    
-                <figure class="lightBox-img">
-                    <img  src="photos/Mimi/Travel_Lonesome.jpg" alt=" Un martin pecheur sur une branche"/>
-                    <div class="description-image">
-                        <figcaption>Solitude</figcaption>
-                    </div>
-                </figure>
-    
-                <figure class="lightBox-img">
-                    <img src="photos/Mimi/Event_SeasideWedding.jpg" alt=" Un martin pecheur sur une branche"/>
-                    <div class="description-image">
-                        <figcaption>Mariage à la mer</figcaption>
-                    </div>
-                </figure>
-    
-                <figure class="lightBox-img">
-                    <img  src="photos/Mimi/Portrait_Background.jpg" alt=" Une jeune fille en noir et blanc"/>
-                    <div class="description-image">
-                        <figcaption>Arc-en-ciel</figcaption>
-                    </div>
-                </figure>
-    
-                <figure class="lightBox-img">
-                    <img  src="photos/Mimi/Event_PintoWedding.jpg" alt=" Une photo de mariage en plein été"/>
-                    <div class="description-image">
-                        <figcaption>Arc-en-ciel</figcaption>
-                    </div>
-                </figure>
-    
-                <figure class="lightBox-img">
-                    <img  src="photos/Mimi/Portrait_Wednesday.jpg" alt=" Une enfant qui se tient accroupie pour reflechir"/>
-                    <div class="description-image">
-                        <figcaption>Arc-en-ciel</figcaption>
-                    </div>
-                </figure> 
-
-                <figure class="lightBox-img"  id ="firstClone" >
-                    <img  src="photos/Mimi/Animals_Rainbow.jpg" alt=" Un martin pecheur sur une branche"/>
-                    <div class="description-image">
-                        <figcaption>Arc-en-ciel</figcaption>
-                    </div>
-                </figure>
-            </div>
-        </div>
-    </div>
 
     <!-- fenetre modale--> 
     <div class="fenetre-modale">
             <div class="formulaire">
                 <div id="formIntroduction" tabindex="20"></div>
 
-                <div id="closeBtn"><img  src="photos/svg/cross white.svg" alt="fermer le formulaire" tabindex="21"/></div>
+                <div id="closeBtn"><img  src="photos/svg/cross white.svg" alt="fermer le formulaire" tabindex="21" aria-label="cliquez ici pour fermer le formulaire"/></div>
                 <form id ="form" action="#">
                     
                     <label for="firstname">Prénom </label><div class="errorFirstName"></div>
@@ -139,14 +72,19 @@
         </div>
     </div>
 
-      <!-- footer--> 
-      
+    <!--LightBox--> 
+    <div id="lightBox">
+        <div id="closeBtnLightBox"><img  src="photos/svg/cross.svg" alt="fermer la lightBox" tabindex="" aria-label="cliquez ici pour fermer le diaporama"/></div>
+        <div id="suivantLightBox"><img  src="photos/svg/chevron-droit.svg" alt="flèche indiquant la photo suivante" tabindex="" aria-label="cliquez ici pour afficher la photo suivante"/></div>
+        <div id="precedentLightBox"><img  src="photos/svg/chevron-gauche.svg" alt="flèche indiquant la photo précedente" tabindex="" aria-label="cliquez ici pour afficher la photo précedente"/></div>
+        <div id="photoSlider"></div>
+    </div>
+    
+    <!-- footer--> 
     <div class="contact"><button type ="button" tabindex="6">Contactez-moi</button></div>
-
     <footer></footer>       
-
+    
    <!--<script type="text/javascript" src="javascript/modale.js"></script>--> 
-    <script type="text/javascript" src="javascript/ligthbox.js"></script>
     <script type="text/javascript" src="json/donnees.json"></script>
     <script type="text/javascript" src="javascript/details.js"></script>
 </body>

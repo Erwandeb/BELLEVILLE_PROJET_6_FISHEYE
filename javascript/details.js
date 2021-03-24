@@ -96,8 +96,8 @@ let photographers;
 
         // Affichage de chaque photos ou videos du photographe
        const carroussel = document.getElementById('carroussel');
-       const imageTag = `<img class='carroussel-img' src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`
-       const videoTag = `<video controls class='carroussel-img' src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`
+       const imageTag = `<img class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`
+       const videoTag = `<video controls class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`
 
        carroussel.innerHTML += `
         <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
@@ -111,8 +111,49 @@ let photographers;
             </div>
         </article>`;
 
+/*------------------------------------- Gestion de la LightBox ------------------------------------------------------------------*/
+   
+        carroussel.addEventListener('click', throwLightBox); 
+        const lightBox = document.getElementById('lightBox');
+        //const photoSlider = getElementById('photoSlider');
+
+        function throwLightBox(e){
+            if (e.target && e.target.id == `carroussel-img-${media.id}`){
+                console.log("hello", media.image);
+                lightBox.style.display = "block";
+
+                photoSlider.innerHTML += `
+                <div id="photo-Slider-${media.id}">
+                ${media.video == undefined ? imageTag : videoTag} 
+                <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
+                <div>
+                `;
+            }
+        };
+
+       
+
+
+        // Fermeture de la lightBox
+        const closeBtnLightBox = document.getElementById("closeBtnLightBox"); 
+        closeBtnLightBox.addEventListener('click', closeBox);
+        window.addEventListener("keydown", (event) =>{
+            if(event.key === 'Escape'){
+                closeBox();
+            }
+        });
+        function closeBox(){
+            lightBox.style.display ="none";
+            removeDataDiaporama()
+        };
+
+        function removeDataDiaporama() {
+            photoSlider.innerHTML ="";
+        }
+
+
     
-    // Incrémentation des likes par images
+/*--------------------------- Incrémentation des likes sur chaques média ------------------------------*/
     carroussel.addEventListener('click', incrementationLike); 
     function incrementationLike(e) {
         if (e.target && e.target.id == `like-media-${media.id}`){
@@ -132,14 +173,14 @@ let photographers;
     }
 
 
-    // Tri par liste déroulante 
+
+/*--------------------------- Fonction de tri dans la liste déroulante ------------------------------*/
     const selectElement = document.querySelector('select');
     selectElement.addEventListener('change', triDetails);
 
     function triDetails(){
-       const carroussel = document.getElementById('carroussel');
+        const carroussel = document.getElementById('carroussel');
         carroussel.innerHTML = "";
-        console.log("test1", mediaData)
 
         if(this.selectedIndex === 0){
             const mediaListTri = mediaData.sort((a, b) => (a.likes < b.likes) ? 1 : -1);
@@ -174,8 +215,6 @@ let photographers;
 
         else if(this.selectedIndex === 1){
             const mediaListTri = mediaData.sort((a, b) => (a.date > b.date) ? 1 : -1);
-            console.log(mediaListTri)
-
             for (data of mediaListTri) {
                 const media = new Media(
                     data.id,
@@ -203,8 +242,6 @@ let photographers;
                     </div>
                 </article>`;
             }
-        
-            
         }
 
         else if(this.selectedIndex === 2){
@@ -236,15 +273,12 @@ let photographers;
                     </div>
                 </article>`;
             }
-        
         };
     }
 
-    //lightbox 
 
 
-
-    // Affichage du Footer
+/*---------------------------------------------- Affichage du Footer -------------------------------------------------------------*/
     const footer = document.querySelector("footer");
     footer.innerHTML +=`
         <div class="compte-like">

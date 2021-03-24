@@ -365,82 +365,73 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
  
  
  /* -------LightBox------------*/
-.lightbox{
-    z-index: -10;
+#lightBox{
     position: absolute;
     width: 100%;
     height: 100%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    top:0px;
+    display: none;
+    top:30px;
+    right: 20px;
     background-color: white;
-    opacity: 0;
+    z-index: 400000;
 
-    .closeLightbox{
+    #closeBtnLightBox{
         position: absolute;
-        top:200px;
-        right:8%;
-        font-size: 70px;
-        color:$primaryColor1;
-        cursor: pointer;
-    }
-    .suivantLightBox{
-        position: absolute;
-        top:45%;
-        right:6%;
-        width: 50px;
-        color:$primaryColor1;
-        font-size: 70px;
-        z-index: 20;
-        cursor: pointer;
-    }
-    .precedentLightBox{
-        position: absolute;
-        top:45%;
-        left:6%;
-        width: 50px;
-        color:$primaryColor1;
-        font-size: 70px;
-        cursor: pointer;
-        z-index: 20;
-    }
-
-    .window-slider{
-        width: 747px;
-        height: 800px;
-        right: 14%;
-        top: 18%;
-        position: absolute;
-        overflow: hidden;
-
-        .slider{
-            height: 800px;
-            display: flex;
-            justify-content: start;
-            right: 14%;
-            top: 20%;
-            figure{
-                width: 100%;
-               margin:0px;
-                img{
-                    object-fit: cover;
-                    width: 747px;
-                    height:90%;
-                    border-radius: 5px;
-                }
-                figcaption{
-                    color: $primaryColor1;
-                    font-size: x-large;
-                    margin-left: 5px;
-                }
-                
-            }
-           
+        top: 120px;
+        right: 50px;
+        z-index: 200000;
+        img{
+            width: 35px;
+            height: 35px;
+            
         }
-
     }
-        
+
+    #suivantLightBox{
+        position: absolute;
+        top: 450px;
+        right: 50px;
+        z-index: 200000;
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    #precedentLightBox{
+        position: absolute;
+        top: 450px;
+        left: 50px;
+        z-index: 200000;
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    #photoSlider{
+        width: 100px;
+        height: 100px;
+
+        img{
+            width: 820px;
+            height: 700px;
+            object-fit: cover;
+            margin-top: 100px;
+           margin-left: 100px;
+           border-radius: 5px;
+           box-shadow:0px 6px 20px grey;
+        }
+        p{
+            margin-left: 100px;
+            font-size: large;
+            color: $primaryColor1;
+            font-weight: 500;
+            width: 300px;
+        }
+    }
+    
+    
 }
 
 /*-------Formulaire------------*/
