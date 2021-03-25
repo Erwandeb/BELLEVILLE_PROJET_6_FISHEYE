@@ -112,17 +112,20 @@ let photographers;
         </article>`;
 
 /*------------------------------------- Gestion de la LightBox ------------------------------------------------------------------*/
-   
+   // TO DO A copier dans la section TRI !!
         
         const lightBox = document.getElementById('lightBox');
         const suivantLightBox = document.getElementById('suivantLightBox');
         const precedentLightBox = document.getElementById('precedentLightBox');
         const closeBtnLightBox = document.getElementById("closeBtnLightBox"); 
+    
 
         carroussel.addEventListener('click', throwLightBox); 
         function throwLightBox(e){
             if (e.target && e.target.id == `carroussel-img-${media.id}`){
-                console.log("hello", media.image);
+                mainDivDetail.style.visibility = "hidden";
+                carroussel.style.visibility = "hidden";
+                footer.style.visibility = "hidden";
                 lightBox.style.display = "block";
                 photoSlider.innerHTML += `
                 <div id="photo-Slider-${media.id}">
@@ -134,17 +137,12 @@ let photographers;
         };
 
         suivantLightBox.addEventListener("click", envoyerPhotoSuivante);
-        function envoyerPhotoSuivante() {
-            const photoSlider = getElementById("photo-Slider-"+media.id);
-            console.log(photoSlider)
-            photoSlider.innerHTML="";
-            console.log("bonjour");
-            
+        function envoyerPhotoSuivante(){
+            const photoSlider = document.getElementById("photo-Slider-"+ media.id);
+            console.log("ceci est le :", photoSlider);
         }
        
 
-
-        
         closeBtnLightBox.addEventListener('click', closeBox);
         window.addEventListener("keydown", (event) =>{
             if(event.key === 'Escape'){
@@ -153,6 +151,9 @@ let photographers;
         });
         function closeBox(){
             lightBox.style.display ="none";
+            carroussel.style.visibility = "visible";
+            footer.style.visibility = "visible";
+            mainDivDetail.style.visibility = "visible";
             removeDataDiaporama()
         };
 
@@ -173,7 +174,7 @@ let photographers;
          showNewTotalLikes();
         }
       };
-    };
+};
     
     function showNewTotalLikes(){
         totalLike++;
