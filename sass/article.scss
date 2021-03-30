@@ -299,28 +299,28 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         #carroussel{
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap:137px;
+            grid-column-gap:62px;
             grid-row: 6;
             justify-self: stretch;
             .carroussel-card{
                 width : 100%;
                 img{
                     width : 100%;
-                    height:250px;
+                    height:300px;
                     border-radius: 5px;
                     object-fit: cover;
                     cursor: pointer;
                 }
                 video{
                     width : 100%;
-                    height:250px;
+                    height:300px;
                     border-radius: 5px;
                     object-fit: cover;
                     cursor: pointer;
                 }
 
                 .description-image{
-                    width : 250px;
+                    width : 100%;
                     display: flex;
                     justify-content:space-between;
                     color: $primaryColor1;

@@ -280,7 +280,7 @@ section .trier select {
 section #carroussel {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 137px;
+  grid-column-gap: 62px;
   grid-row: 6;
   justify-self: stretch;
 }
@@ -289,20 +289,20 @@ section #carroussel .carroussel-card {
 }
 section #carroussel .carroussel-card img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   border-radius: 5px;
   object-fit: cover;
   cursor: pointer;
 }
 section #carroussel .carroussel-card video {
   width: 100%;
-  height: 250px;
+  height: 300px;
   border-radius: 5px;
   object-fit: cover;
   cursor: pointer;
 }
 section #carroussel .carroussel-card .description-image {
-  width: 250px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   color: #901C1C;
