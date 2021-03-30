@@ -78,7 +78,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         justify-content: space-between;
         background-color: #FAFAFA;
         position: relative;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
 
         .presentation{
             width: 310px;
@@ -261,14 +261,11 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     section{
         width: 100%;
         height: auto;
-        
-
         .trier{
             display: flex;
             position: relative;
             width: 40%;
-            margin-left: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             p{
                 width: 85px;
                 font-weight: bold;
@@ -302,21 +299,20 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         #carroussel{
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap:15px;
+            grid-column-gap:137px;
             grid-row: 6;
+            justify-self: stretch;
             .carroussel-card{
-                width : 250px;
-                margin-left: 40px;
-                margin-right: 40px;
+                width : 100%;
                 img{
-                    width : 250px;
+                    width : 100%;
                     height:250px;
                     border-radius: 5px;
                     object-fit: cover;
                     cursor: pointer;
                 }
                 video{
-                    width : 250px;
+                    width : 100%;
                     height:250px;
                     border-radius: 5px;
                     object-fit: cover;
@@ -330,7 +326,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                     color: $primaryColor1;
                     font-weight: bold;
                     align-items: flex-start;
-                    height: 70px;
+                    height: 45px;
                     padding-top :5px;
                     p{
                         margin :0px;
