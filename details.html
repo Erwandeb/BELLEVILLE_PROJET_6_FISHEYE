@@ -45,19 +45,19 @@
                 <div id="formIntroduction" tabindex="20"></div>
 
                 <div id="closeBtn"><img  src="photos/svg/cross white.svg" alt="fermer le formulaire" tabindex="21" aria-label="cliquez ici pour fermer le formulaire"/></div>
-                <form id ="form" action="#">
+                <form id ="form" action="#" role="dialog" aria-labelledby="fenetre modale" aria-describedby="fenetre modale">
                     
                     <label for="firstname">Prénom </label><div class="errorFirstName"></div>
-                    <input type="text" id="firstname" name="firstname" aria-label="Ecrivez votre prénom">
+                    <input type="text" id="firstname" name="firstname" aria-label="Ecrivez votre prénom" aria-describedby="firstname-format">
                     
                     <label for="lastname">Nom  </label><div class="errorlastName"></div>
-                    <input type="text" id="lastname" name="lastname" aria-label="Ecrivez votre nom">
+                    <input type="text" id="lastname" name="lastname" aria-label="Ecrivez votre nom" aria-describedby="lastname-format">
                     
                     <label for="email">Email  </label><div class="erroreMail"></div>
-                    <input type="email" id="email" name="email" aria-label="Ecrivez votre e-mail">
+                    <input type="email" id="email" name="email" aria-label="Ecrivez votre e-mail" aria-describedby="email-format">
 
                     <label for="message"> Votre message  </label><div class="erroreMessageText"></div>
-                    <textarea name="message" id="message" aria-label="Ecrivez votre message"></textarea>
+                    <textarea name="message" id="message" aria-label="Ecrivez votre message" aria-describedby="text-format"></textarea>
 
                     <button class="soumission" type ="submit" aria-label="cliquez ici pour envoyer votre formulaire">Envoyer</button>
 
@@ -73,10 +73,10 @@
     </div>
 
     <!--LightBox--> 
-    <div id="lightBox">
-        <div id="closeBtnLightBox"><img  src="photos/svg/cross.svg" alt="fermer la lightBox" tabindex="" aria-label="cliquez ici pour fermer le diaporama"/></div>
-        <div id="suivantLightBox" class="photoSuivante"><img  src="photos/svg/chevron-droit.svg" alt="flèche indiquant la photo suivante" tabindex="" aria-label="cliquez ici pour afficher la photo suivante"/></div>
-        <div id="precedentLightBox"><img  src="photos/svg/chevron-gauche.svg" alt="flèche indiquant la photo précedente" tabindex="" aria-label="cliquez ici pour afficher la photo précedente"/></div>
+    <div id="lightBox" role="dialog">
+        <div id="closeBtnLightBox"><img  src="photos/svg/cross.svg" alt="fermer la lightBox" tabindex="100" aria-label="cliquez ici pour fermer le diaporama"/></div>
+        <div id="suivantLightBox" class="photoSuivante"><img  src="photos/svg/chevron-droit.svg" alt="flèche indiquant la photo suivante" tabindex="101" aria-label="cliquez ici pour afficher la photo suivante"/></div>
+        <div id="precedentLightBox"><img  src="photos/svg/chevron-gauche.svg" alt="flèche indiquant la photo précedente" tabindex="102" aria-label="cliquez ici pour afficher la photo précedente"/></div>
         <div id="photoSlider"></div>
     </div>
     

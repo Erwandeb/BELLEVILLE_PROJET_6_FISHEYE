@@ -112,7 +112,7 @@ let photographers;
         </article>`;
 
 /*------------------------------------- Gestion de la LightBox ------------------------------------------------------------------*/
-   // TO DO A copier dans la section TRI !!
+   // TO DO A copier dans la section TRI !
         
         const lightBox = document.getElementById('lightBox');
         const suivantLightBox = document.getElementById('suivantLightBox');
@@ -123,6 +123,7 @@ let photographers;
         carroussel.addEventListener('click', throwLightBox); 
         function throwLightBox(e){
             if (e.target && e.target.id == `carroussel-img-${media.id}`){
+                console.log("id de la photo =", media.id)
                 mainDivDetail.style.visibility = "hidden";
                 carroussel.style.visibility = "hidden";
                 footer.style.visibility = "hidden";
@@ -138,8 +139,29 @@ let photographers;
 
         suivantLightBox.addEventListener("click", envoyerPhotoSuivante);
         function envoyerPhotoSuivante(){
-            const photoSlider = document.getElementById("photo-Slider-"+ media.id);
-            console.log("ceci est le :", photoSlider);
+            const photoSliderValue = document.getElementById("photo-Slider-"+ media.id);
+            console.log(photoSliderValue);
+            photoSliderValue.forEach((element) => {
+                if(id != null){
+                    console.log('hello');
+                }
+            })
+            //photoSlider.innerHTML ="";
+    
+            /*
+            photoSlider.innerHTML += `
+            <div id="photo-Slider-${media.id}">
+            ${media.video == undefined ? imageTag : videoTag} 
+            <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
+            <div>
+            `;
+            */
+        }
+
+        precedentLightBox.addEventListener("click", envoyerPhotoprecedente);
+        function envoyerPhotoprecedente(){
+        console.log('precedent');
+            
         }
        
 

@@ -1048,59 +1048,64 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
 
     #closeBtnLightBox{
         position: absolute;
-        top: 5%;
-        right: 1%;
+        top: 280px;
+        right: 38px;
         z-index: 200000;
         img{
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
             
         }
     }
 
     #suivantLightBox{
         position: absolute;
-        top: 450px;
-        right: 50px;
+        top: 365px;
+        right: 38px;
         z-index: 200000;
         img{
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
         }
     }
 
     #precedentLightBox{
         position: absolute;
-        top: 450px;
-        left: 50px;
+        top: 365px;
+        left: 38px;
         z-index: 200000;
         img{
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
         }
     }
 
     #photoSlider{
         width: 100%;
-        height: 100%;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
 
         img{
             width: 200px;
             height: 200px;
-            margin-left: 28%;
+            margin-left: 0px;
             object-fit: cover;
-            margin-top: 50%;
+            margin-top: 0px;
            border-radius: 5px;
            box-shadow:0px 6px 20px grey;
            position: relative;
         }
         p{
             margin-top: 0px;
-            margin-left: 28%;
+            margin-left: 0px;
             font-size: large;
             color: $primaryColor1;
             font-weight: 500;
             width: 200px;
+            text-align: start;
         }
     }
     
