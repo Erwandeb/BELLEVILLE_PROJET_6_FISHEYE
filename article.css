@@ -395,6 +395,15 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
   border-radius: 5px;
   box-shadow: 0px 6px 20px grey;
 }
+#lightBox #photoSlider video {
+  width: 820px;
+  height: 700px;
+  object-fit: cover;
+  margin-top: 100px;
+  margin-left: 100px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 20px grey;
+}
 #lightBox #photoSlider p {
   margin-left: 100px;
   font-size: large;
@@ -1010,6 +1019,16 @@ footer .fa-heart {
     justify-content: center;
   }
   #lightBox #photoSlider img {
+    width: 200px;
+    height: 200px;
+    margin-left: 0px;
+    object-fit: cover;
+    margin-top: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 20px grey;
+    position: relative;
+  }
+  #lightBox #photoSlider video {
     width: 200px;
     height: 200px;
     margin-left: 0px;

@@ -412,8 +412,16 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     #photoSlider{
         width: 100px;
         height: 100px;
-
         img{
+            width: 820px;
+            height: 700px;
+            object-fit: cover;
+            margin-top: 100px;
+           margin-left: 100px;
+           border-radius: 5px;
+           box-shadow:0px 6px 20px grey;
+        }
+        video{
             width: 820px;
             height: 700px;
             object-fit: cover;
@@ -1085,6 +1093,17 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         justify-content: center;
 
         img{
+            width: 200px;
+            height: 200px;
+            margin-left: 0px;
+            object-fit: cover;
+            margin-top: 0px;
+           border-radius: 5px;
+           box-shadow:0px 6px 20px grey;
+           position: relative;
+          
+        }
+        video{
             width: 200px;
             height: 200px;
             margin-left: 0px;
