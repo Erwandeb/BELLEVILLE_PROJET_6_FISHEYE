@@ -75,8 +75,8 @@ fetch('javascript/data.json')
 
     //Affichage des médias
     const mediaData = data.media.filter((media) => media.photographerId === parseInt(id));
-    for (data of mediaData) {
-      const media = new Media(
+    for (data of mediaData){
+    const media = new Media(
         data.id,
         data.photographerId,
         data.image,
@@ -87,31 +87,23 @@ fetch('javascript/data.json')
         data.date,
         data.price,
         data.description
-      );
+    );
 
-      totalLike += media.likes;
+    totalLike += media.likes;
 
-      // Affichage de chaque photos ou videos du photographe
-      const carroussel = document.getElementById('carroussel');
-      const imageTag = `<img class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`;
-      const videoTag = `<video controls class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`;
+    // Affichage de chaque photos ou videos du photographe
+    const carroussel = document.getElementById('carroussel');
+    const imageTag = `<img class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`;
+    const videoTag = `<video controls class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`;
 
-      carroussel.innerHTML += `
+    carroussel.innerHTML += `
         <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
             ${media.video == undefined ? imageTag : videoTag} 
             <div class="description-image">
-            <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${
-        media.titre
-      }</p>
+            <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p>
             <div class="prix-like">
-               <p tabindex="${media.photographerId}" aria-label=" le prix de cette photo est ${media.price}€"  >${
-        media.price
-      } €</p>
-               <div class="like-compteur" tabindex="${
-                 media.photographerId
-               }"> <span class="likeCounter" id="like-counter-${media.id}" aria-label="il à été aimé ${
-        media.likes
-      } fois ">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
+               <p tabindex="${media.photographerId}" aria-label=" le prix de cette photo est ${media.price}€">${media.price} €</p>
+               <div class="like-compteur" tabindex="${media.photographerId}"> <span class="likeCounter" id="like-counter-${media.id}" aria-label="il à été aimé ${media.likes} fois ">${media.likes}</span><span><i class="fas fa-heart" id="like-media-${media.id}"></i></span></div>
             </div>
             </div>
         </article>`;
@@ -119,7 +111,7 @@ fetch('javascript/data.json')
 /*--------------------------- Incrémentation des likes ------------------------------------------ ------------------------------*/
       carroussel.addEventListener('click', incrementationLike);
       function incrementationLike(e) {
-        if (e.target && e.target.id == `like-media-${media.id}`) {
+        if (e.target && e.target.id == `like-media-${media.id}`){
           const likeCounter = document.getElementById(`like-counter-${media.id}`);
           const likeValue = parseInt(likeCounter.innerHTML);
           let nbrLikes = likeValue + 1;
@@ -266,35 +258,81 @@ fetch('javascript/data.json')
                     ${media.video == undefined ? imageTag : videoTag} 
                     <p tabindex="${media.photographerId}" aria-label=" le titre de l'oeuvre est ${media.titre}">${media.titre}</p><div>
                 `;
-      }
+        }
     }
 
-    suivantLightBox.addEventListener('click', envoyerPhotoSuivante);
+    suivantLightBox.addEventListener('click', showNextPhoto);
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight'){
+            showNextPhoto();
+        }
+    });
 
-    function envoyerPhotoSuivante(){
-        console.log(currentViewedMedia);
-        const photoSliderValue = document.getElementById('photo-Slider-' + currentViewedMedia.id);
-        let index = mediaData.indexOf(currentViewedMedia);
-        let nextMedia = mediaData[index + 1];
-        console.log("nextMedia", nextMedia);
+    function showNextPhoto(){
+        const incrementationIndex = 1;
+        let index = mediaData.indexOf(currentViewedMedia); 
+        let nextMedia = mediaData[index + incrementationIndex]; 
+        currentViewedMedia = nextMedia;
+    
+        const imageTag = `<img class="carroussel-img" id="carroussel-img-${nextMedia.id}" src="photos/${nextMedia.photographerId}/${nextMedia.image}" alt="${nextMedia.description}">`;
+        const videoTag = `<video controls class='carroussel-img' id="carroussel-img-${nextMedia.id}" src="photos/${nextMedia.photographerId}/${nextMedia.image}" alt="${nextMedia.description}"></video>`;
 
-       if(nextMedia != undefined){
-            photoSliderValue.innerHTML = `
-                <img class="carroussel-img" id="carroussel-img-${nextMedia.id}" src="photos/${nextMedia.photographerId}/${nextMedia.image}" alt="${nextMedia.description}"> 
+        if(currentViewedMedia != undefined){
+            photoSlider.innerHTML = `
+                ${nextMedia.video == undefined ? imageTag : videoTag} 
                 <p tabindex="${nextMedia.photographerId}" aria-label="${nextMedia.description}">${nextMedia.titre}</p>
                 <div>
                 </div>
-                `;
+            `;
+        }
+
+        if(currentViewedMedia == undefined){    
+            let currentViewedMedia = nextMedia;
+            let index = mediaData.indexOf(currentViewedMedia);
+            let nextMedia = mediaData[index + incrementationIndex];            
         }
     }
 
-    precedentLightBox.addEventListener('click', envoyerPhotoprecedente);
-        function envoyerPhotoprecedente(){
-            console.log('precedent');
+
+    precedentLightBox.addEventListener('click', showPreviewPhoto);
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft'){
+            showPreviewPhoto();
+        }
+    });
+
+        function showPreviewPhoto(){
+            const decrementationIndex = 1;
+            let index = mediaData.indexOf(currentViewedMedia); 
+            console.log('index de la photo acutelle', index);
+            let prevMedia = mediaData[index - decrementationIndex]; 
+            currentViewedMedia = prevMedia;
+        
+            const imageTag = `<img class="carroussel-img" id="carroussel-img-${prevMedia.id}" src="photos/${prevMedia.photographerId}/${prevMedia.image}" alt="${prevMedia.description}">`;
+            const videoTag = `<video controls class='carroussel-img' id="carroussel-img-${prevMedia.id}" src="photos/${prevMedia.photographerId}/${prevMedia.image}" alt="${prevMedia.description}"></video>`;
+    
+            if(currentViewedMedia != undefined){
+                photoSlider.innerHTML = `
+                    ${prevMedia.video == undefined ? imageTag : videoTag} 
+                    <p tabindex="${prevMedia.photographerId}" aria-label="${prevMedia.description}">${prevMedia.titre}</p>
+                    <div>
+                    </div>
+                `;
+            }
+    
+            if(currentViewedMedia == undefined){    
+                currentViewedMedia = mediaData[mediaData.length - 1];
+                let index = mediaData.indexOf(currentViewedMedia);
+                let prevMedia = mediaData[index - decrementationIndex];  
+                console.log('prevMedia',prevMedia);
+                
+                
+            }
         }
 
+
     closeBtnLightBox.addEventListener('click', closeBox);
-        window.addEventListener('keydown', (event) => {
+    window.addEventListener('keydown', (event) => {
         if (event.key === 'Escape'){
             closeBox();
         }
@@ -329,7 +367,6 @@ fetch('javascript/data.json')
     const closeBtn = document.getElementById('closeBtn');
     const formIntroduction = document.getElementById('formIntroduction');
 
-    console.log(contactMe);
     formIntroduction.innerHTML += `
         <div>
             <h1>Contactez-moi</h1>
@@ -346,9 +383,9 @@ fetch('javascript/data.json')
     //fermeture de la modale
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
+    if (event.key === 'Escape') {
         closeModal();
-      }
+    }
     });
 
     function closeModal() {
@@ -453,4 +490,5 @@ fetch('javascript/data.json')
     function openFenetreConfirmation() {
       fenetreConfirmation.style.display = 'block';
     }
-  });
+
+});
