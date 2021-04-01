@@ -1,18 +1,14 @@
 @import "variables/variables.scss";
 
 /*  
-
 Pour utiliser SASS, merci de copier ce lien dans le terminal : 
-
 ./dart-sass/sass sass/article.scss article.css --watch
-
-
 */
 
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------DESKTOP RESOLUTION------------------------------------------------------------------*/
+/*--------------------------------------------DESKTOP----------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------*/
 
     body{
@@ -21,7 +17,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         margin:auto;
         align-items: center;
         position: relative;
-        //font-family: 'Roboto', sans-serif;
     }
 
     /*--Header de la page---*/
@@ -40,12 +35,10 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             width:100%;
             }
         }
-       nav{
+        nav{
            width: 80%;
            align-items: center;
            text-align: center;
-          
-            
            button{
             border-radius: 20px;
             padding:5px;
@@ -59,13 +52,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 background-color: $primaryColor1;
                 color:white;
             }
-            }
         }
+    }
        
        h2{
-           font-size :medium;
-            width: 330px;
-           color: $primaryColor1;
+        font-size :medium;
+        width: 330px;
+        color: $primaryColor1;
        }
     }
 
@@ -89,24 +82,24 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             text-align: center;
             align-items: flex-start;
             padding-left: 50px;
-             h1 {
-                 margin:0px;
-                 font-weight: lighter;
-                 font-size: 45px;
-                 color: $primaryColor2;
-                 letter-spacing: 1px;
-                 width:100%;
-                 height: auto;
-                 display: flex;
-                 text-align: start;
+            h1 {
+                margin:0px;
+                font-weight: lighter;
+                font-size: 45px;
+                color: $primaryColor2;
+                letter-spacing: 1px;
+                width:100%;
+                height: auto;
+                display: flex;
+                text-align: start;
              }
-             h3{
+            h3{
                 margin:0px;
                 font-weight: lighter;
                 font-size: 20px;
                 color: $primaryColor1;
              }
-             blockquote{
+            blockquote{
                 margin: 10px 0px 10px 0px;
                 font-weight: lighter;
                 font-size: small;
@@ -353,8 +346,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                                 transform :scale(1.15);
                             }
                         }
-                    }
-                    
+                    }   
                 }
             }
         }
@@ -381,7 +373,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         img{
             width: 35px;
             height: 35px;
-            
         }
     }
 
@@ -438,18 +429,15 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             width: 300px;
         }
     }
-    
-    
 }
 
 /*-------Formulaire------------*/
 .fenetre-modale{
     display: none;
     z-index: 13;
-   position: absolute;
-   top: 0px;
+    position: absolute;
+    top: 0px;
     right: 0px;
-    
     .formulaire{
         height:auto;
         width:675px;
@@ -494,13 +482,12 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             width: 35px;
             height: 35px;
         }
-       }
+    }
         form{
             display: flex;
             flex-direction: column;
             width: 660px;
             font-size: 32px;
-
             label{
                 font-weight: lighter;
                 font-size: 46px;
@@ -522,7 +509,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 font-size: 35px;
                 padding-left: 10px;
             }
-
             .soumission{
                 color:white;
                 background-color:$primaryColor1;
@@ -534,7 +520,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 border:none;
                 border-radius:5px;
             }
-
             .errorFirstName{
                 font-size: large;
                 color : whitesmoke;
@@ -546,7 +531,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             .erroreMail{
                 font-size: medium;
                 color : whitesmoke;
-
             }
             .erroreMessageText{
                 font-size: medium;
@@ -575,31 +559,26 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         justify-content: center;
         align-items: center;
         text-align: center;
-
-            p{
-                font-size: larger;
-            }
-        
-        
-            a{
-            padding: 5px;
-            margin: 5px;
-            height: 45px;
-            background-color: #901C1C;
-            border-radius: 5px;
-            color: white;
-            border: none;
-            font-family: "DM sans";
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            align-items: center;
-            display: flex;
-            }
+        p{
+        font-size: larger;
+        }
+        a{
+        padding: 5px;
+        margin: 5px;
+        height: 45px;
+        background-color: #901C1C;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        font-family: "DM sans";
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        }
     }
-    
 }
-
     footer{
         width: 26%;
         position:sticky;
@@ -620,7 +599,9 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
     }
 
 
-
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------BIG PHONE--------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width:426px){
 
@@ -773,9 +754,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 }
             }
         }
-
-        
-
         img{
             width: 100px;
             height: 100px;
@@ -802,7 +780,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             padding : 5px 10px 5px 10px;
         }
     }
-
 
     /*--- Description image du carroussel ----*/
     section{
@@ -864,8 +841,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                             cursor: pointer;
                             margin-left: 3px;
                         }
-                    }
-                    
+                    }  
                 }
             }
         }
@@ -877,7 +853,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
 .fenetre-modale{
     display: none;
     z-index: 13;
-   position: fixed;
+    position: fixed;
     width: 100%;
     
     .formulaire{
@@ -920,10 +896,10 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         font-size: 30px;
         border-radius: none;
         cursor: pointer;
-        img{
-            width: 22px;
-            height: 22px;
-        }
+            img{
+                width: 22px;
+                height: 22px;
+            }
        }
         form{
             display: flex;
@@ -974,7 +950,7 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 justify-content: center;
                 display: flex;
                 position: relative;
-               right: 0;
+                right: 0;
             }
 
             .errorFirstName{
@@ -988,12 +964,10 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             .erroreMail{
                 font-size: 14px;
                 color : whitesmoke;
-
             }
             .erroreMessageText{
                 font-size: 14px;
                 color : whitesmoke;
-
             }
         }
     }
@@ -1058,7 +1032,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         img{
             width: 15px;
             height: 15px;
-            
         }
     }
 
@@ -1092,7 +1065,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         text-align: center;
         justify-content: center;
         flex-direction: column;
-
         img{
             width: 250px;
             height: 250px;
@@ -1102,7 +1074,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
            border-radius: 5px;
            box-shadow:0px 6px 20px grey;
            position: relative;
-          
         }
         video{
             width: 250px;
@@ -1124,17 +1095,16 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             text-align: start;
         }
     }
-    
-    
 }
 
     footer{
         display: none;
     }
-
-
 }
 
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------SMALL PHONE-----------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width:370px){
     #lightBox{
         position: absolute;
@@ -1154,7 +1124,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             img{
                 width: 15px;
                 height: 15px;
-                
             }
         }
     
@@ -1188,17 +1157,15 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
             text-align: center;
             justify-content: center;
             flex-direction: column;
-    
             img{
                 width: 220px;
                 height: 220px;
                 margin-left: 0px;
                 object-fit: cover;
                 margin-top: 0px;
-               border-radius: 5px;
-               box-shadow:0px 6px 20px grey;
-               position: relative;
-              
+                border-radius: 5px;
+                box-shadow:0px 6px 20px grey;
+                position: relative;
             }
             video{
                 width: 220px;
@@ -1206,9 +1173,9 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 margin-left: 0px;
                 object-fit: cover;
                 margin-top: 0px;
-               border-radius: 5px;
-               box-shadow:0px 6px 20px grey;
-               position: relative;
+                border-radius: 5px;
+                box-shadow:0px 6px 20px grey;
+                position: relative;
             }
             p{
                 margin-top: 10px;
@@ -1220,7 +1187,5 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
                 text-align: start;
             }
         }
-        
-        
     }
 }
