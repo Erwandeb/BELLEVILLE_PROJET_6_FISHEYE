@@ -45,9 +45,7 @@ eventsFiltre.addEventListener('keypress', filtrerPhotographe);
 function filtrerPhotographe() {
 
     mainDiv.innerHTML = '';
-
     let filtreActif = this.dataset.filter;
-    console.log("le filtre choisi est : " , filtreActif);
     let photographerMatchList = [];
     
     fetch('javascript/data.json')
@@ -55,79 +53,67 @@ function filtrerPhotographe() {
     .then(function (data){
 
         for(item of data.photographers) {
-            const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait)
-            //console.log("testpageindex" , photographer);
-            
+            const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait) 
             comparaison();
-                function comparaison(){
-                    photographer.tags.forEach(element => {
-                        if(element === filtreActif){
-                            photographerMatchList.push(photographer)
-                            //console.log("bonjour" , element)
-                            console.log("liste des photographes correspondant au filtre actif :", photographerMatchList);
-                        }
-
-                    });
-                }
+            function comparaison(){
+                photographer.tags.forEach(element => {
+                    if(element === filtreActif){
+                        photographerMatchList.push(photographer)
+                    }
+                });
+            }
         }
         for(photographer of photographerMatchList){
             mainDiv.innerHTML += `
             <article>
-                    <a href="details.html?id=${photographer.id}"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
-                            alt="${photographer.description}"/></a>
-                    <div class="description-article">
-                        <h2>${photographer.name}</h2>
-                        <h3>${photographer.city}, ${photographer.country}</h3>
-                        <blockquote>${photographer.tagline}</blockquote>
-                        <p>${photographer.price}€ /jour</p>
-                    </div>
-                    <div id="filtres-articles-${photographer.id}"></div>
+            <a href="details.html?id=${photographer.id}"><img src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}"/></a>
+            <div class="description-article">
+            <h2>${photographer.name}</h2>
+            <h3>${photographer.city}, ${photographer.country}</h3>
+            <blockquote>${photographer.tagline}</blockquote>
+            <p>${photographer.price}€ /jour</p>
+            </div>
+            <div id="filtres-articles-${photographer.id}"></div>
             </article>  
             `;
-             // récupération des tags
-             const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
-             for(tag of photographer.tags){
-                 filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
-                 // console.log(tag)
-             }
-        }
-        
-    });
-
-};
-
-function showAllPhotographer() {
-
-    mainDiv.innerHTML = '';
-
-fetch('javascript/data.json')
-  .then((response) => response.json())
-  .then(function (data){
-
-    for(item of data.photographers) {
-        const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait)
-
-        mainDiv.innerHTML += `
-        <article>
-                <a href="details.html?id=${photographer.id}"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"
-                        alt="${photographer.description}"/></a>
-                <div class="description-article">
-                    <h2>${photographer.name}</h2>
-                    <h3>${photographer.city}, ${photographer.country}</h3>
-                    <blockquote>${photographer.tagline}</blockquote>
-                    <p>${photographer.price}€ /jour</p>
-                </div>
-                <div id="filtres-articles-${photographer.id}"></div>
-        </article>  
-        `;
             // récupération des tags
             const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
             for(tag of photographer.tags){
                 filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
-                // console.log(tag)
             }
-    }
-});
+        }
+    });
 
+};
+
+function showAllPhotographer(){
+    mainDiv.innerHTML = '';
+    fetch('javascript/data.json')
+    .then((response) => response.json())
+    .then(function (data){
+
+        for(item of data.photographers) {
+            const photographer = new Photographer(item.id, item.name, item.description, item.city, item.country, item.tags, item.tagline, item.price, item.portrait)
+
+            mainDiv.innerHTML += `
+            <article>
+            <a href="details.html?id=${photographer.id}"><img src="photos/Photographers-ID-Photos/${photographer.portrait}"alt="${photographer.description}"/></a>
+            <div class="description-article">
+            <h2>${photographer.name}</h2>
+            <h3>${photographer.city}, ${photographer.country}</h3>
+            <blockquote>${photographer.tagline}</blockquote>
+            <p>${photographer.price}€ /jour</p>
+            </div>
+            <div id="filtres-articles-${photographer.id}"></div>
+            </article>  
+            `;
+                
+            // récupération des tags
+            const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
+            for(tag of photographer.tags){
+                filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}">#${tag}</span>`;
+            }
+        }
+    });
 }
 

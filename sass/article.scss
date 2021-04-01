@@ -352,7 +352,6 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
         }
     }
  
- 
  /* -------LightBox------------*/
 #lightBox{
     position: absolute;
@@ -1106,6 +1105,20 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
 /*--------------------------------------------SMALL PHONE-----------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width:370px){
+    
+    main{
+        img {
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            top: 72px;
+            right: 18px;
+        }
+    }
+      
+    
+    
+    
     #lightBox{
         position: absolute;
         width: 100%;
