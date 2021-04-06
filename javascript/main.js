@@ -43,13 +43,7 @@ fetch('javascript/data.json')
             const filtresArticles = document.getElementById("filtres-articles-"+photographer.id);
             for(tag of photographer.tags){
                 filtresArticles.innerHTML+= `<span class="photographerTag" data-tag="${tag}" tabindex="${photographer.id}" aria-label="${photographer.name} est spécialisé dans les  ${tag}" >#${tag}</span>`;
-            }
-
-        
-        // Affichage profil photographe 
-    
-
-            
+            }            
     }
 });
 

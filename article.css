@@ -519,9 +519,9 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
 .fenetre-validation-formulaire {
   height: 200px;
   width: 675px;
-  position: absolute;
-  top: 50%;
-  right: 18%;
+  position: fixed;
+  top: 45%;
+  right: 33%;
   background-color: #D3573C;
   display: none;
   border-radius: 5px;

@@ -56,13 +56,13 @@ fetch('javascript/data.json')
     // Affichage du début de la page
     const mainDivDetail = document.getElementById('mainDivDetail');
     mainDivDetail.innerHTML += `
-        <main id="mainDivDetail">
+        <main id="mainDivDetail" tabindex="1">
             <div class="presentation">
-                <h1 tabindex="2" title="ceci est la page de ${photographer.name}">${photographer.name}</h1>
-                <h3 tabindex="3">${photographer.city}, ${photographer.country}</h3>
-                <blockquote tabindex="4">${photographer.tagline}</blockquote>
+                <h1 tabindex="1" title="ceci est la page de ${photographer.name}">${photographer.name}</h1>
+                <h3 tabindex="2">${photographer.city}, ${photographer.country}</h3>
+                <blockquote tabindex="3">${photographer.tagline}</blockquote>
       
-                <div id="filtres-articles-${photographer.id}" tabindex="5"></div>
+                <div id="filtres-articles-${photographer.id}" tabindex="4"></div>
             </div>
 
         <img src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}" tabindex="7"/>
@@ -93,8 +93,8 @@ fetch('javascript/data.json')
 
     // Affichage de chaque photos ou videos du photographe
     const carroussel = document.getElementById('carroussel');
-    const imageTag = `<img class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.image}' alt='${media.description}'/>`;
-    const videoTag = `<video controls class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.video}' alt='${media.description}'></video>`;
+    const imageTag = `<img class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.image}' alt='${media.description}' tabindex="${media.photographerId}"/>`;
+    const videoTag = `<video controls class='carroussel-img' id="carroussel-img-${media.id}" src='photos/${media.photographerId}/${media.video}' alt='${media.description}' tabindex="${media.photographerId}"></video>`;
 
     carroussel.innerHTML += `
         <article class="carroussel-card" tabindex="${media.photographerId}" aria-label ="${media.description}">
