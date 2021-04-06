@@ -338,12 +338,13 @@ section #carroussel .carroussel-card .prix-like .like-compteur .fa-heart:hover {
 #lightBox {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 880px;
   display: none;
   top: 30px;
   right: 20px;
   background-color: white;
   z-index: 400000;
+  overflow: hidden;
 }
 #lightBox #closeBtnLightBox {
   position: absolute;

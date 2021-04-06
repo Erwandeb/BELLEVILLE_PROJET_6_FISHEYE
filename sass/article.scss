@@ -356,12 +356,13 @@ Pour utiliser SASS, merci de copier ce lien dans le terminal :
 #lightBox{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 880px;
     display: none;
     top:30px;
     right: 20px;
     background-color: white;
     z-index: 400000;
+    overflow: hidden;
 
     #closeBtnLightBox{
         position: absolute;
