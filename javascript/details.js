@@ -56,13 +56,13 @@ fetch('javascript/data.json')
     // Affichage du début de la page
     const mainDivDetail = document.getElementById('mainDivDetail');
     mainDivDetail.innerHTML += `
-        <main id="mainDivDetail" tabindex="1">
+        <main id="mainDivDetail">
             <div class="presentation">
-                <h1 tabindex="1" title="ceci est la page de ${photographer.name}">${photographer.name}</h1>
-                <h3 tabindex="2">${photographer.city}, ${photographer.country}</h3>
-                <blockquote tabindex="3">${photographer.tagline}</blockquote>
+                <h1 tabindex="3" title="ceci est la page de ${photographer.name}">${photographer.name}</h1>
+                <h3 tabindex="4">${photographer.city}, ${photographer.country}</h3>
+                <blockquote tabindex="5">${photographer.tagline}</blockquote>
       
-                <div id="filtres-articles-${photographer.id}" tabindex="4"></div>
+                <div id="filtres-articles-${photographer.id}" tabindex="6"></div>
             </div>
 
         <img src="photos/Photographers-ID-Photos/${photographer.portrait}" alt="${photographer.description}" tabindex="7"/>
@@ -174,6 +174,7 @@ fetch('javascript/data.json')
         let currentViewedMedia;
 
         carroussel.addEventListener('click', throwLightBox);
+        
         function throwLightBox(e) {
         if(e.target.id.startsWith('carroussel-img-')){
             let id = e.target.id.split('-').pop();
@@ -594,6 +595,7 @@ fetch('javascript/data.json')
     let currentViewedMedia;
 
     carroussel.addEventListener('click', throwLightBox);
+
     function throwLightBox(e) {
       if(e.target.id.startsWith('carroussel-img-')){
         let id = e.target.id.split('-').pop();
