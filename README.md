@@ -23,7 +23,8 @@ Techniques abordées dans ce projet :
 
 <img width="930" alt="Capture3" src="https://user-images.githubusercontent.com/73883090/152129059-60391f92-977b-4806-8296-1cdad235da46.PNG">
 
-<img width="930" alt="Capture4" src="https://user-images.githubusercontent.com/73883090/152129069-67405747-b29a-4934-9f45-99e6cec7df46.PNG">
+<img width="930" alt="Capture4" src="https://user-images.githubusercontent.com/73883090/152129346-c5b6a9af-e52c-4c03-9b1f-8a4c1e824d82.PNG">
+
 
 
 ## Pré-Requis :
