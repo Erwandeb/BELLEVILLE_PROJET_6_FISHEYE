@@ -17,16 +17,13 @@ Techniques abordées dans ce projet :
 
 ## Quelques captures d'écrans : 
 
-<img width="930" alt="Capture" src="https://user-images.githubusercontent.com/73883090/152127486-f287157f-0be9-4413-b84a-56b96e3a8094.PNG">
+<img width="930" alt="Capture" src="https://user-images.githubusercontent.com/73883090/152129035-84eb8e80-2605-43d0-aa32-3161718040fa.PNG">
 
-<img width="930" alt="Capture2" src="https://user-images.githubusercontent.com/73883090/152127494-921a6273-d7af-445b-8a84-9b533c26976b.PNG">
+<img width="930" alt="Capture2" src="https://user-images.githubusercontent.com/73883090/152129046-ffeaa5d2-b5c4-4ee6-b518-81da95acc6b0.PNG">
 
-<img width="930" alt="Capture3" src="https://user-images.githubusercontent.com/73883090/152127508-d14e8862-d618-4e44-b1ed-7916bf5f0f02.PNG">
+<img width="930" alt="Capture3" src="https://user-images.githubusercontent.com/73883090/152129059-60391f92-977b-4806-8296-1cdad235da46.PNG">
 
-<img width="930" alt="Capture4" src="https://user-images.githubusercontent.com/73883090/152127520-1244a2ce-3313-4b10-a60f-6e0e68f2e508.PNG">
-
-
-
+<img width="930" alt="Capture4" src="https://user-images.githubusercontent.com/73883090/152129069-67405747-b29a-4934-9f45-99e6cec7df46.PNG">
 
 
 ## Pré-Requis :
