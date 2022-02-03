@@ -3,7 +3,8 @@
 Il s'agit d'un site internet dynamique, sous forme de réseau social pour photographes.
 AUCUNE LIBRAIRIE EXTERNE POUR CE PROJET.
 
-Techniques abordées dans ce projet :
+
+### Techniques de développement :
 
 - Le contenu des pages est généré dynamiquement à partir d'un fichier JSON. 
 - Plusieurs fonction de tri ont été implémentés.
@@ -13,6 +14,14 @@ Techniques abordées dans ce projet :
 - Incrémentaion des boutons "j'aime".
 - Programmation orientée Objet.
 - Design Pattern : Factory Method. 
+
+
+### Outils techniques :
+
+- Vanilla javascript
+- Sass
+- HTML
+
 
 
 ## Quelques captures d'écrans : 
